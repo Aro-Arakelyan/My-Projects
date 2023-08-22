@@ -22,7 +22,6 @@ export function Home () {
                     </li>
                 </div>
             </div>
-           
         </div>
 
     )

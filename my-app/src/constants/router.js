@@ -1,5 +1,6 @@
 export const router = {
     HOME: "/",
     FIRST: "/first",
-    SECOND:"/second"
+    SECOND:"/second",
+    THIRD: "/third"
 }
