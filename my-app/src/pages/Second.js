@@ -1,7 +1,8 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
+import {Button, Col, Form, Input, Row, Select} from "antd"
 import {useNavigate} from "react-router"
 import {router} from "../constants/router";
 import {useEffect, useState} from "react";
+import {country} from "../functions/countries";
 
 export const Second = () => {
     const navigate = useNavigate();
@@ -35,56 +36,7 @@ export const Second = () => {
                                         label="9. Country/Region of Origin (Nationality)" name="select8">
                                         <Select
                                             defaultValue=""
-                                            options={[
-                                                {
-                                                    label: "Aruba",
-                                                    value: "Aruba"
-                                                },
-                                                {
-                                                    label: "Armenia",
-                                                    value: "Armenia"
-                                                },
-                                                {
-                                                    label: "Argentina",
-                                                    value: "Argentina"
-                                                },
-                                                {
-                                                    label: "Brazil",
-                                                    value: "Brazil"
-                                                },
-                                                {
-                                                    label: "Germany",
-                                                    value: "Germany"
-                                                },
-                                                {
-                                                    label: "Denmark",
-                                                    value: "Denmark"
-                                                },
-                                                {
-                                                    label: "Georgia",
-                                                    value: "Georgia"
-                                                },
-                                                {
-                                                    label: "Spain",
-                                                    value: "Spain"
-                                                },
-                                                {
-                                                    label: "Russia",
-                                                    value: "Russia"
-                                                },
-                                                {
-                                                    label: "USA",
-                                                    value: "USA"
-                                                },
-                                                {
-                                                    label: "UK",
-                                                    value: "UK"
-                                                },
-                                                {
-                                                    label: "Wales",
-                                                    value: "Wales"
-                                                }
-                                            ]}/>
+                                            options={country()}/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
