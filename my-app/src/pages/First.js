@@ -33,24 +33,24 @@ export const First = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="1. Surnames" name="Surnames">
+                                    <Form.Item label="1. Surnames">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="2. Given Names" name="givenName">
+                                    <Form.Item label="2. Given Names" >
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="3. Full Name" name="FullName">
+                                    <Form.Item label="3. Full Name" >
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
                                     <Form.Item  label="4. Have you ever used other names (i.e., maiden, religious, professional, alias, etc.)?" name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
@@ -66,12 +66,12 @@ export const First = () => {
                                 {visible && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="4.1 Other Surnames Used (maiden, religious, professional, aliases, etc.)" name="one">
+                                            <Form.Item label="4.1 Other Surnames Used (maiden, religious, professional, aliases, etc.)" >
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="4.2 Other Given Names Used" name="two">
+                                            <Form.Item label="4.2 Other Given Names Used" >
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
@@ -80,15 +80,13 @@ export const First = () => {
                                 <Col span={24}>
                                     <Form.Item  label="5. Do you have a telecode that represents your name?" name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
-                                                    id : '2',
                                                     label: "no",
                                                     value: "no"
                                                 },
                                                 {
-                                                    id : '2',
                                                     label: "yes",
                                                     value: "yes"
                                                 }
@@ -99,12 +97,12 @@ export const First = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item
-                                                label="5.1 Telecode Surnames" name="three">
+                                                label="5.1 Telecode Surnames" >
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="5.2 Telecode Given Names" name="four">
+                                            <Form.Item label="5.2 Telecode Given Names">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
@@ -113,7 +111,7 @@ export const First = () => {
                                 <Col span={24}>
                                     <Form.Item label="6. Sex" name="select3">
                                         <Select
-                                            defaultValue=" "
+                                            initialvalue=" "
                                             options={[
                                                 {
                                                     label: "a. Male",
@@ -129,7 +127,7 @@ export const First = () => {
                                 <Col span={24}>
                                     <Form.Item label="7. Marital Status" name="select4">
                                         <Select
-                                            defaultValue=" "
+                                            initialvalue=" "
                                             options={[
                                                 {
                                                     label: "a. Married",
@@ -167,7 +165,7 @@ export const First = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="8. Date and Place of Birth" name="select5">
+                                    <Form.Item label="8. Date and Place of Birth" >
                                         <Col offset={2} span={22}>
                                             <Form.Item label="8.1 (Format: YYYY-MM-DD)" name="select6">
                                                 <DatePicker/>
@@ -177,17 +175,17 @@ export const First = () => {
                                             <Form.Item
                                                 label="8.2 Country/Region" name="select7">
                                                 <Select
-                                                    defaultValue=""
+                                                    initialvalue=""
                                                     options={country()}/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="8.3 City" name="City">
+                                            <Form.Item label="8.3 City" >
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="8.4 State/Province" name="State/Province">
+                                            <Form.Item label="8.4 State/Province">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
@@ -199,8 +197,8 @@ export const First = () => {
                             <Row>
                                 <Col span={24}>Application ID:</Col>
                                 <Col span={24}>
-                                    <Form.Item label="Picture" name="Picture">
-
+                                    <Form.Item label="Picture" >
+                                        "123"
                                     </Form.Item>
 
                                 </Col>

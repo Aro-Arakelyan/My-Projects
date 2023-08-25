@@ -100,3 +100,11 @@ body {
 .oooo {
   display: flex;
 }
+
+.lengthOfStay {
+  display: flex;
+}
+
+.select {
+  margin-left: 1rem;
+}

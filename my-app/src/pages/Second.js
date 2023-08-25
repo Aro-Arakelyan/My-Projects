@@ -35,7 +35,7 @@ export const Second = () => {
                                     <Form.Item
                                         label="9. Country/Region of Origin (Nationality)" name="select8">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={country()}/>
                                     </Form.Item>
                                 </Col>
@@ -44,7 +44,7 @@ export const Second = () => {
                                         label="10. Do you hold or have you held any nationality other than the one indicated above on nationality?"
                                         name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
@@ -70,7 +70,7 @@ export const Second = () => {
                                                 label="10.2 Do you hold a passport for the other country/region of origin (nationality) indicated above?"
                                                 name="select">
                                                 <Select
-                                                    defaultValue=""
+                                                    initialvalue=""
                                                     options={[
                                                         {
                                                             label: "no",
@@ -100,7 +100,7 @@ export const Second = () => {
                                         label="11. Are you a permanent resident of a country/region other than your country/region of origin (nationality) indicated above?"
                                         name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
@@ -119,7 +119,7 @@ export const Second = () => {
                                             <Form.Item
                                                 label="11.1 Other Permanent Resident Country/Region" name="elevenOne">
                                                 <Select
-                                                    defaultValue=""
+                                                    initialvalue=""
                                                     options={[
                                                         {
                                                             label: "Aruba",
@@ -177,7 +177,7 @@ export const Second = () => {
                                 <Col span={24}>
                                     <Form.Item label="12. National Identification Number" name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
@@ -201,7 +201,7 @@ export const Second = () => {
                                 <Col span={24}>
                                     <Form.Item label="13.1.2.3 U.S. Social Security Number" name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
@@ -229,7 +229,7 @@ export const Second = () => {
                                 <Col span={24}>
                                     <Form.Item label="14. U.S. Taxpayer ID Number" name="select">
                                         <Select
-                                            defaultValue=""
+                                            initialvalue=""
                                             options={[
                                                 {
                                                     label: "no",
