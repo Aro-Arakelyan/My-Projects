@@ -16,93 +16,94 @@ import {country, province} from "../functions/countries";
 export const Third = () => {
     const navigate = useNavigate();
 
-    const [visible1, setVisible1] = useState(false)
-    const [visible2, setVisible2] = useState(false)
-    const [visible3, setVisible3] = useState(false)
-    const [visible4, setVisible4] = useState(false)
-    const [visible51, setVisible51] = useState(false)
-    const [visible52, setVisible52] = useState(false)
-    const [visible53, setVisible53] = useState(false)
-    const [visible54, setVisible54] = useState(false)
+    const [visible10, setVisible10] = useState(false)
+    const [visible11, setVisible11] = useState(false)
+    const [visible12, setVisible12] = useState(false)
+    const [visible13, setVisible13] = useState(false)
+    const [visible14, setVisible14] = useState(false)
+    const [visible15, setVisible15] = useState(false)
+    const [visible16, setVisible16] = useState(false)
+    const [visible17, setVisible17] = useState(false)
 
 
 
     const [form] = Form.useForm();
 
-    const selectedValue1 = Form.useWatch("selectOne", form);
-    const selectedValue2 = Form.useWatch("selectOne", form);
-    const selectedValue3 = Form.useWatch("selectOne", form);
-    const selectedValue4 = Form.useWatch("selectOne", form);
-    const selectedValue51 = Form.useWatch("select17", form);
-    const selectedValue52 = Form.useWatch("select17", form);
-    const selectedValue53 = Form.useWatch("select18", form);
-    const selectedValue54 = Form.useWatch("select18", form);
-
+    const selectedValue10 = Form.useWatch("select10", form);
+    const selectedValue11 = Form.useWatch("select10", form);
+    const selectedValue12 = Form.useWatch("select10", form);
+    const selectedValue13 = Form.useWatch("select10", form);
+    const selectedValue14 = Form.useWatch("select17", form);
+    const selectedValue15 = Form.useWatch("select17", form);
+    const selectedValue16 = Form.useWatch("select17", form);
+    const selectedValue17 = Form.useWatch("select17", form);
 
 
     useEffect(() => {
-        if (selectedValue51 === "no") {
-            setVisible51(true)
+        if (selectedValue10 === "a. (K1) FIANCÉ(E) OF A U.S. CITIZEN") {
+            setVisible10(true)
         } else {
-            setVisible51(false)
+            setVisible10(false)
         }
-    }, [selectedValue51, visible51])
+    }, [selectedValue10, visible10])
 
     useEffect(() => {
-        if (selectedValue52 === "yes") {
-            setVisible52(true)
+        if (selectedValue11 === "b. (K2) CHILD OF A K1") {
+            setVisible11(true)
         } else {
-            setVisible52(false)
+            setVisible11(false)
         }
-    }, [selectedValue52, visible52])
+    }, [selectedValue11, visible11])
 
     useEffect(() => {
-        if (selectedValue53 === "b. OTHER PERSON") {
-            setVisible53(true)
+        if (selectedValue12 === "c. (K3) SPOUSE OF A U.S. CITIZEN") {
+            setVisible12(true)
         } else {
-            setVisible53(false)
+            setVisible12(false)
         }
-    }, [selectedValue53, visible53])
+    }, [selectedValue12, visible12])
 
     useEffect(() => {
-        if (selectedValue54 === "e. OTHER COMPANY/ORGANIZATION") {
-            setVisible54(true)
+        if (selectedValue13=== "d. (K4) CHILD OF A K3") {
+            setVisible13(true)
         } else {
-            setVisible54(false)
+            setVisible13(false)
         }
-    }, [selectedValue54, visible54])
+    }, [selectedValue13, visible13])
 
     useEffect(() => {
-        if (selectedValue1 === "a. (K1) FIANCÉ(E) OF A U.S. CITIZEN") {
-            setVisible1(true)
+        if (selectedValue14 === "no") {
+            setVisible14(true)
         } else {
-            setVisible1(false)
+            setVisible14(false)
         }
-    }, [selectedValue1, visible1])
+    }, [selectedValue14, visible14])
 
     useEffect(() => {
-        if (selectedValue2 === "b. (K2) CHILD OF A K1") {
-            setVisible2(true)
+        if (selectedValue15 === "yes") {
+            setVisible15(true)
         } else {
-            setVisible2(false)
+            setVisible15(false)
         }
-    }, [selectedValue2, visible2])
+    }, [selectedValue15, visible15])
 
     useEffect(() => {
-        if (selectedValue2 === "c. (K3) SPOUSE OF A U.S. CITIZEN") {
-            setVisible3(true)
+        if (selectedValue16 === "b. OTHER PERSON") {
+            setVisible16(true)
         } else {
-            setVisible3(false)
+            setVisible16(false)
         }
-    }, [selectedValue3, visible3])
+    }, [selectedValue16, visible16])
 
     useEffect(() => {
-        if (selectedValue4 === "d. (K4) CHILD OF A K3") {
-            setVisible4(true)
+        if (selectedValue17 === "e. OTHER COMPANY/ORGANIZATION") {
+            setVisible17(true)
         } else {
-            setVisible4(false)
+            setVisible17(false)
         }
-    }, [selectedValue4, visible4])
+    }, [selectedValue17, visible17])
+
+
 
     const handleSubmit = (values) => {
         console.log(values)
@@ -125,13 +126,13 @@ export const Third = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="16. Specify" name="selectOne">
+                                    <Form.Item label="16. Specify" name="select10">
                                         <Select
                                             initialvalue=""
                                             options={specify()}/>
                                     </Form.Item>
                                 </Col>
-                                {visible1 && <Col span={24}>
+                                {visible10 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item label="16.11 Application Receipt/Petition Number"
@@ -140,9 +141,8 @@ export const Third = () => {
                                             </Form.Item>
                                         </Col>
                                     </Row>
-
                                 </Col>}
-                                {visible2 && <Col span={24}>
+                                {visible11 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item label="16.1 Surname" name="sixteenEleven1">
@@ -159,7 +159,7 @@ export const Third = () => {
                                     </Row>
 
                                 </Col>}
-                                {visible3 && <Col span={24}>
+                                {visible12 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item label="16.11 Application Receipt/Petition Number"
@@ -168,19 +168,18 @@ export const Third = () => {
                                             </Form.Item>
                                         </Col>
                                     </Row>
-
                                 </Col>}
-                                {visible4 && <Col span={24}>
+                                {visible13 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="16.1 Surname" name="sixteenEleven1">
+                                            <Form.Item label="16.1 Surname" name="surename">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="16.2 Name" name="sixteenEleven2">
+                                            <Form.Item label="16.2 Name" name="name">
                                                 <Input/>
                                             </Form.Item>
                                             <Form.Item label="16.11 Application Receipt/Petition Number"
-                                                       name="sixteenEleven3">
+                                                       name="petitionNumber">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
@@ -203,12 +202,11 @@ export const Third = () => {
                                             ]}/>
                                     </Form.Item>
                                 </Col>
-                                {visible51 && <Col span={24}>
+                                {visible14 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.1.2.3 Intended Date of Arrival " name="select6">
-                                                    <p>(Format: YYYY-MM-DD)</p>
+                                                <Form.Item label="17.1.2.3 Intended Date of Arrival" name="select6">
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
@@ -251,17 +249,16 @@ export const Third = () => {
                                         </Col>
                                     </Row>
                                 </Col>}
-                                {visible52 && <Col span={24}>
+                                {visible15 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
                                                 <Form.Item label="17.6.7.8 Date of Arrival in U.S." name="arrivalDate">
-                                                    <p>(Format: YYYY-MM-DD)</p>
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.9 Arrival Flight (if known)" name="flight">
+                                                <Form.Item label="17.9 Arrival Flight (if known)" name="arrivalFlight">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -273,17 +270,16 @@ export const Third = () => {
                                             <Col offset={2} span={22}>
                                                 <Form.Item label="17.11.12.13 Date of Departure from U.S."
                                                            name="departureDate">
-                                                    <p>(Format: YYYY-MM-DD)</p>
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.14 Departure Flight (if known)" name="flight">
+                                                <Form.Item label="17.14 Departure Flight (if known)" name="departureFlight">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.15 Departure City" name="departureCity">
+                                                <Form.Item label="17.15 Departure City" name="departCity">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -291,16 +287,16 @@ export const Third = () => {
                                                 <Form.Item
                                                     label="17.16 Provide the locations you plan to visit in the U.S.:"
                                                     name="visitPlan">
-                                                    <textarea id="textar" name="textar" rows="6" cols="50"></textarea>
+                                                    <textarea id="textar17" name="textar17" rows="6" cols="50"></textarea>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.17 Street Address" name="departureCity">
+                                                <Form.Item label="17.17 Street Address" name="strAdd">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.18 City" name="departureCity">
+                                                <Form.Item label="17.18 City" name="depCity">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -320,8 +316,6 @@ export const Third = () => {
                                         </Col>
                                     </Row>
                                 </Col>}
-
-
                                 <Col span={24}>
                                     <Form.Item label="18. Person/Entity Paying for Your Trip" name="select18">
                                         <Select
@@ -329,16 +323,16 @@ export const Third = () => {
                                             options={personPay()}/>
                                     </Form.Item>
                                 </Col>
-                                {visible53 && <Col span={24}>
+                                {visible16 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
                                                 <Form.Item label="18.1 Surnames of Person Paying for Trip"
-                                                           name="surname">
+                                                           name="surnameOfPerson">
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="18.2 Given Names of Person Paying for Trip"
-                                                           name="givenName">
+                                                           name="givenNameOfPerson">
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="18.3 Telephone Number"
@@ -356,7 +350,7 @@ export const Third = () => {
                                                 </Form.Item>
                                                 <Form.Item
                                                     label="19. Is the address of the party paying for your trip the same as your Home or Mailing Address?"
-                                                    name="select19">
+                                                    name="addressIsSame">
                                                     <Select
                                                         initialvalue=""
                                                         options={[
@@ -374,12 +368,12 @@ export const Third = () => {
                                         </Col>
                                     </Row>
                                 </Col>}
-                                {visible54 && <Col span={24}>
+                                {visible17 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
                                                 <Form.Item label="20. Street Address"
-                                                           name="streetAd">
+                                                           name="streetAddress">
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="20.1 City"
@@ -387,7 +381,7 @@ export const Third = () => {
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="20.2 State/Province"
-                                                           name="stateProvince">
+                                                           name="province">
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="20.3 Postal Zone/ZIP Code"
@@ -400,7 +394,6 @@ export const Third = () => {
                                                         initialvalue=""
                                                         options={country()}/>
                                                 </Form.Item>
-
                                             </Col>
                                         </Col>
                                     </Row>
@@ -409,7 +402,7 @@ export const Third = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={2} span={24}>
+                <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SECOND)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FOURTH)} htmlType="submit">next</Button>
                 </Col>

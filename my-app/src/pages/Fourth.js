@@ -5,17 +5,39 @@ import {useEffect, useState} from "react";
 
 export const Fourth = () => {
     const navigate = useNavigate();
-    const [visible, setVisible] = useState(false)
+    const [visible18, setVisible18] = useState(false)
+    const [visible19, setVisible19] = useState(false)
+    const [visible20, setVisible20] = useState(false)
+
     const [form] = Form.useForm();
-    const selectedValue = Form.useWatch("select", form);
+    const selectedValue18 = Form.useWatch("select18", form);
+    const selectedValue19 = Form.useWatch("select19", form);
+    const selectedValue20 = Form.useWatch("select20", form);
+
 
     useEffect(() => {
-        if (selectedValue === "yes") {
-            setVisible(true)
+        if (selectedValue18 === "yes") {
+            setVisible18(true)
         } else {
-            setVisible(false)
+            setVisible18(false)
         }
-    }, [selectedValue, visible])
+    }, [selectedValue18, visible18])
+
+    useEffect(() => {
+        if (selectedValue19 === "yes") {
+            setVisible19(true)
+        } else {
+            setVisible19(false)
+        }
+    }, [selectedValue19, visible19])
+
+    useEffect(() => {
+        if (selectedValue20 === "no") {
+            setVisible20(true)
+        } else {
+            setVisible20(false)
+        }
+    }, [selectedValue20, visible20])
 
 
     const handleSubmit = (values) => {
@@ -24,73 +46,14 @@ export const Fourth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={16} className="PersonalInform">Travel Information</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
+            <Row gutter={23} justify="space-between">
+                <Col offset={4} span={15} className="PersonalInform">Travel Companions Information</Col>
+                <Col offset={2} span={15}>
+                    <Row gutter={23}>
                         <Col span={15}>
                             <Row>
-                                <Col span={24}>
-                                    <Form.Item
-                                        label="9. Country/Region of Origin (Nationality)" name="select8">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
-                                                {
-                                                    label: "Aruba",
-                                                    value: "Aruba"
-                                                },
-                                                {
-                                                    label: "Armenia",
-                                                    value: "Armenia"
-                                                },
-                                                {
-                                                    label: "Argentina",
-                                                    value: "Argentina"
-                                                },
-                                                {
-                                                    label: "Brazil",
-                                                    value: "Brazil"
-                                                },
-                                                {
-                                                    label: "Germany",
-                                                    value: "Germany"
-                                                },
-                                                {
-                                                    label: "Denmark",
-                                                    value: "Denmark"
-                                                },
-                                                {
-                                                    label: "Georgia",
-                                                    value: "Georgia"
-                                                },
-                                                {
-                                                    label: "Spain",
-                                                    value: "Spain"
-                                                },
-                                                {
-                                                    label: "Russia",
-                                                    value: "Russia"
-                                                },
-                                                {
-                                                    label: "USA",
-                                                    value: "USA"
-                                                },
-                                                {
-                                                    label: "UK",
-                                                    value: "UK"
-                                                },
-                                                {
-                                                    label: "Wales",
-                                                    value: "Wales"
-                                                }
-                                            ]}/>
-                                    </Form.Item>
-                                </Col>
-                                <Col span={24}>
-                                    <Form.Item
-                                        label="10. Do you hold or have you held any nationality other than the one indicated above on nationality?"
-                                        name="select">
+                                <Col span={23}>
+                                    <Form.Item label="21. Are there other persons traveling with you?" name="select18">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -105,18 +68,12 @@ export const Fourth = () => {
                                             ]}/>
                                     </Form.Item>
                                 </Col>
-                                {visible && <Col span={24}>
+                                {visible18 && <Col span={24}>
                                     <Row>
-                                        <Col offset={2} span={22}>
-                                            <Form.Item label="10.1 Other Country/Region of Origin (Nationality)"
-                                                       name="five">
-                                                <Input/>
-                                            </Form.Item>
-                                        </Col>
-                                        <Col offset={2} span={22}>
+                                        <Col offset={2} span={21}>
                                             <Form.Item
-                                                label="10.2 Do you hold a passport for the other country/region of origin (nationality) indicated above?"
-                                                name="select">
+                                                label="21.1 Are you traveling as part of a group or organization?"
+                                                name="select19">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -131,178 +88,40 @@ export const Fourth = () => {
                                                     ]}/>
                                             </Form.Item>
                                         </Col>
-                                        {visible && <Col span={24}>
+                                        {visible19 && <Col span={24}>
                                             <Row>
-                                                <Col offset={4} span={20}>
-                                                    <Form.Item label="10.2.1 Passport Number" name="tenTwoOne">
+                                                <Col offset={4} span={19}>
+                                                    <Form.Item label="21.1.1 Group Name" name="groupName">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
-
+                                            </Row>
+                                        </Col>}
+                                        {visible20 && <Col span={23}>
+                                            <Row>
+                                                <Col offset={2} span={21}>
+                                                    <Form.Item label="21.1.2 Surnames of Person Traveling With You"
+                                                               name="surnamesWithYou">
+                                                        <Input/>
+                                                    </Form.Item>
+                                                    <Form.Item label="21.1.3 Given Names of Person Traveling With You"
+                                                               name="namesWithYou">
+                                                        <Input/>
+                                                    </Form.Item>
+                                                    <Form.Item label="21.1.4 Relationship with Person"
+                                                               name="relationshipWithPerson">
+                                                        <Input/>
+                                                    </Form.Item>
+                                                </Col>
                                             </Row>
                                         </Col>}
                                     </Row>
                                 </Col>}
-                                <Col span={24}>
-                                    <Form.Item
-                                        label="11. Are you a permanent resident of a country/region other than your country/region of origin (nationality) indicated above?"
-                                        name="select">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
-                                                {
-                                                    label: "no",
-                                                    value: "no"
-                                                },
-                                                {
-                                                    label: "yes",
-                                                    value: "yes"
-                                                }
-                                            ]}/>
-                                    </Form.Item>
-                                </Col>
-                                {visible && <Col span={24}>
-                                    <Row>
-                                        <Col offset={2} span={22}>
-                                            <Form.Item
-                                                label="11.1 Other Permanent Resident Country/Region" name="elevenOne">
-                                                <Select
-                                                    initialvalue=""
-                                                    options={[
-                                                        {
-                                                            label: "Aruba",
-                                                            value: "Aruba"
-                                                        },
-                                                        {
-                                                            label: "Armenia",
-                                                            value: "Armenia"
-                                                        },
-                                                        {
-                                                            label: "Argentina",
-                                                            value: "Argentina"
-                                                        },
-                                                        {
-                                                            label: "Brazil",
-                                                            value: "Brazil"
-                                                        },
-                                                        {
-                                                            label: "Germany",
-                                                            value: "Germany"
-                                                        },
-                                                        {
-                                                            label: "Denmark",
-                                                            value: "Denmark"
-                                                        },
-                                                        {
-                                                            label: "Georgia",
-                                                            value: "Georgia"
-                                                        },
-                                                        {
-                                                            label: "Spain",
-                                                            value: "Spain"
-                                                        },
-                                                        {
-                                                            label: "Russia",
-                                                            value: "Russia"
-                                                        },
-                                                        {
-                                                            label: "USA",
-                                                            value: "USA"
-                                                        },
-                                                        {
-                                                            label: "UK",
-                                                            value: "UK"
-                                                        },
-                                                        {
-                                                            label: "Wales",
-                                                            value: "Wales"
-                                                        }
-                                                    ]}/>
-                                            </Form.Item>
-                                        </Col>
-                                    </Row>
-                                </Col>}
-                                <Col span={24}>
-                                    <Form.Item label="12. National Identification Number" name="select">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
-                                                {
-                                                    label: "no",
-                                                    value: "no"
-                                                },
-                                                {
-                                                    label: "yes",
-                                                    value: "yes"
-                                                }
-                                            ]}/>
-                                    </Form.Item>
-                                    <Col offset={7}>
-                                        <span className="text">
-                                            If Yes, fill
-                                        </span>
-                                        <span>
-                                            <input className="input1" type="text"/>
-                                        </span>
-                                    </Col>
-                                </Col>
-                                <Col span={24}>
-                                    <Form.Item label="13.1.2.3 U.S. Social Security Number" name="select">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
-                                                {
-                                                    label: "no",
-                                                    value: "no"
-                                                },
-                                                {
-                                                    label: "yes",
-                                                    value: "yes"
-                                                }
-                                            ]}/>
-                                    </Form.Item>
-                                    <Col offset={7}>
-                                            <span className="text">
-                                                If Yes, fill
-                                            </span>
-                                        <span className="ssn">SSN1</span>
-                                        <span className="ssn">SSN2</span>
-                                        <span className="ssn">SSN3</span>
-                                        <span>
-                                                <input className="input2" type="text"/>
-                                            </span>
-
-                                    </Col>
-                                </Col>
-                                <Col span={24}>
-                                    <Form.Item label="14. U.S. Taxpayer ID Number" name="select">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
-                                                {
-                                                    label: "no",
-                                                    value: "no"
-                                                },
-                                                {
-                                                    label: "yes",
-                                                    value: "yes"
-                                                }
-                                            ]}/>
-                                    </Form.Item>
-                                    <Col offset={7}>
-                                        <span className="text">
-                                            If Yes, fill
-                                        </span>
-                                        <span>
-                                            <input className="input1" type="text"/>
-                                        </span>
-                                    </Col>
-                                </Col>
                             </Row>
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={2} span={24}>
+                <Col offset={2} span={21}>
                     <Button type="primary" onClick={() => navigate(router.THIRD)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FIFTH)} htmlType="submit">next</Button>
                 </Col>

@@ -58,7 +58,6 @@ body {
 .fl {
   padding: 10rem;
   display: flex;
-  justify-content: start;
   background: #3de5fc;
 }
 
@@ -73,7 +72,7 @@ body {
 }
 .text {
   font-size: 1rem;
-  margin-top: -1rem;
+  margin-top: -3rem;
   color: red;
   font-weight: bold;
   font-style: italic;
@@ -108,3 +107,10 @@ body {
 .select {
   margin-left: 1rem;
 }
+
+.subtitle {
+  margin-left: 6.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
