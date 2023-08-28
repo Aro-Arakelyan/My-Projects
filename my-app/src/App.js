@@ -18,8 +18,9 @@ import {Twelfth} from "./pages/Twelfth";
 import {Thirteenth} from "./pages/Thirteenth";
 import {Fourteenth} from "./pages/Fourteenth";
 import {Fifteenth} from "./pages/Fifteenth";
-
-
+import {Sixteenth} from "./pages/Sixteenth";
+import {Seventeenth} from "./pages/Seventeenth";
+import {Eighteenth} from "./pages/Eighteenth";
 
 
 function App() {
@@ -42,7 +43,9 @@ function App() {
                 <Route path={router.THIRTEENTH} element={<Thirteenth/>}/>
                 <Route path={router.FOURTEENTH} element={<Fourteenth/>}/>
                 <Route path={router.FIFTEENTH} element={<Fifteenth/>}/>
-
+                <Route path={router.SIXTEENTH} element={<Sixteenth/>}/>
+                <Route path={router.SEVENTEENTH} element={<Seventeenth/>}/>
+                <Route path={router.EIGHTEENTH} element={<Eighteenth/>}/>
 
             </Routes>
         </BrowserRouter>

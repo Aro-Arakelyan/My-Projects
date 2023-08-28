@@ -14,6 +14,9 @@ export const router = {
     TWELFTH: "/twelfth",
     THIRTEENTH: "/thirteenth",
     FOURTEENTH: "/fourteenth",
-    FIFTEENTH: "/fifteenth"
+    FIFTEENTH: "/fifteenth",
+    SIXTEENTH: "/sixteenth",
+    SEVENTEENTH: "/seventeenth",
+    EIGHTEENTH: "/eighteenth"
 
 }
