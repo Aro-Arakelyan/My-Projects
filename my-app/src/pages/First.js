@@ -3,6 +3,7 @@ import {useNavigate} from "react-router"
 import {router} from "../constants/router";
 import {useEffect, useState} from "react";
 import {country} from "../functions/countries"
+import {Pic} from "../functions/pic"
 
 
 export const First = () => {
@@ -37,9 +38,9 @@ export const First = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Personal Information 1</Col>
-                <Col offset={2} span={16}>
+            <Row gutter={11} justify="space-between">
+                <Col offset={6} span={17} className="PersonalInform">Personal Information 1</Col>
+                <Col offset={2} span={14}>
                     <Row gutter={24}>
                         <Col span={15}>
                             <Row>
@@ -212,6 +213,12 @@ export const First = () => {
                         </Col>
                     </Row>
                 </Col>
+                <Col span={7}>
+                    <Form.Item
+                        label="" name="qwer">
+                        {Pic()}
+                    </Form.Item>
+                </Col>
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.HOME)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.SECOND)} htmlType="submit">next</Button>
@@ -220,3 +227,8 @@ export const First = () => {
         </Form>
     )
 }
+
+
+
+
+

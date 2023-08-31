@@ -1,7 +1,8 @@
 
 * {
     margin: 1px;
-    padding: 0;
+    padding-right: 5px;
+
 }
 
 body {
@@ -60,7 +61,8 @@ body {
 .fl {
     padding: 10rem;
     display: flex;
-    background: #3de5fc;
+    justify-content: center;
+
 }
 
 .txt {

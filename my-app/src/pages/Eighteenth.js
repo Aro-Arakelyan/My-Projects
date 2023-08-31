@@ -143,7 +143,7 @@ export const Eighteenth = () => {
                 </Col>
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SEVENTEENTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.HOME)} htmlType="submit">Proceed to
+                    <Button type="primary" onClick={() => navigate(router.H)} htmlType="submit">Proceed to
                         pay</Button>
                 </Col>
             </Row>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function Home () {
 
     return (
-        <div>
+        <div className="head">
             <div className="fl">
                 <div className="txt">
                     <p>Choose language</p>
@@ -13,11 +13,11 @@ export function Home () {
                 </div>
                 <div className="a">
                     <li className="b">
-                        <a className="c" href="#">Languages</a>
+                        <span className="c">Languages</span>
                         <ul className="dropdown">
                             <li className="e"><Link className="c" to={router.FIRST}>English</Link></li>
-                            <li className="e"><a className="c" href="#">Հայերեն</a></li>
-                            <li className="e"><a className="c" href="#">Русский</a></li>
+                            <li className="e"><Link className="c" to={router.FIRST}>Русский</Link></li>
+                            <li className="e"><Link className="c" to={router.FIRST}>Հայերեն</Link></li>
                         </ul>
                     </li>
                 </div>
