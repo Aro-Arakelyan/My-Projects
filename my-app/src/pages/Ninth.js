@@ -16,11 +16,11 @@ export const Ninth = () => {
 
     const [form] = Form.useForm();
 
-    const selectedValue35 = Form.useWatch("select39", form);
-    const selectedValue36 = Form.useWatch("select40", form);
-    const selectedValue37 = Form.useWatch("select41", form);
-    const selectedValue38 = Form.useWatch("select42", form);
-    const selectedValue39 = Form.useWatch("select43", form);
+    const selectedValue35 = Form.useWatch("fathers-fullname", form);
+    const selectedValue36 = Form.useWatch("father-in-the-US", form);
+    const selectedValue37 = Form.useWatch("mothers-fullname", form);
+    const selectedValue38 = Form.useWatch("mother-in-the-US", form);
+    const selectedValue39 = Form.useWatch("other-relatives", form);
 
 
     useEffect(() => {
@@ -77,8 +77,8 @@ export const Ninth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="45. Father's Full Name and Date of Birth"
-                                               name="select39">
+                                    <Form.Item rules={[{required: true,},]} label="45. Father's Full Name and Date of Birth"
+                                               name="fathers-fullname">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -98,23 +98,23 @@ export const Ninth = () => {
                                         <Col offset={2} span={22}>
                                             <div>
                                                 <Col span={24}>
-                                                    <Form.Item label="45.1 Surnames" name="surename45">
+                                                    <Form.Item rules={[{required: true,},]} label="45.1 Surnames" name="surename45">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="45.2 Given Names" name="givenName45">
+                                                    <Form.Item rules={[{required: true,},]} label="45.2 Given Names" name="givenName45">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col offset={2} span={22}>
-                                                    <Form.Item label="45.3 Date of Birth" name="birthday45">
+                                                    <Form.Item rules={[{required: true,},]} label="45.3 Date of Birth" name="birthday45">
                                                         <DatePicker/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="45.4 Is your father in the U.S.?"
-                                                               name="select40">
+                                                    <Form.Item rules={[{required: true,},]} label="45.4 Is your father in the U.S.?"
+                                                               name="father-in-the-US">
                                                         <Select
                                                             initialvalue=""
                                                             options={[
@@ -132,7 +132,7 @@ export const Ninth = () => {
                                                 {visible36 && <Col span={24}>
                                                     <Row>
                                                         <Col offset={2} span={22}>
-                                                            <Form.Item label="45.4.1 Father's Status"
+                                                            <Form.Item rules={[{required: true,},]} label="45.4.1 Father's Status"
                                                                        name="fathersStatus45">
                                                                 <Select
                                                                     initialvalue=""
@@ -163,8 +163,8 @@ export const Ninth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="46. Mother's Full Name and Date of Birth"
-                                               name="select41">
+                                    <Form.Item rules={[{required: true,},]} label="46. Mother's Full Name and Date of Birth"
+                                               name="mothers-fullname">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -184,23 +184,23 @@ export const Ninth = () => {
                                         <Col offset={2} span={22}>
                                             <div>
                                                 <Col span={24}>
-                                                    <Form.Item label="46.1 Surnames" name="surename46">
+                                                    <Form.Item rules={[{required: true,},]} label="46.1 Surnames" name="surename46">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="46.2 Given Names" name="givenName46">
+                                                    <Form.Item rules={[{required: true,},]} label="46.2 Given Names" name="givenName46">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col offset={2} span={22}>
-                                                    <Form.Item label="46.3 Date of Birth" name="birthday46">
+                                                    <Form.Item rules={[{required: true,},]} label="46.3 Date of Birth" name="birthday46">
                                                         <DatePicker/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="46.4 Is your mother in the U.S.?"
-                                                               name="select42">
+                                                    <Form.Item rules={[{required: true,},]} label="46.4 Is your mother in the U.S.?"
+                                                               name="ther-in-the-US">
                                                         <Select
                                                             initialvalue=""
                                                             options={[
@@ -218,7 +218,7 @@ export const Ninth = () => {
                                                 {visible38 && <Col span={24}>
                                                     <Row>
                                                         <Col offset={2} span={22}>
-                                                            <Form.Item label="46.4.1 Mother's Status"
+                                                            <Form.Item rules={[{required: true,},]} label="46.4.1 Mother's Status"
                                                                        name="mothersStatus46">
                                                                 <Select
                                                                     initialvalue=""
@@ -249,9 +249,9 @@ export const Ninth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="47. Do you have any immediate relatives, not including parents, in the United States?"
-                                        name="select43">
+                                        name="other-relatives">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -271,17 +271,17 @@ export const Ninth = () => {
                                         <Col offset={2} span={22}>
                                             <div>
                                                 <Col span={24}>
-                                                    <Form.Item label="47.1 Surnames" name="surename47">
+                                                    <Form.Item rules={[{required: true,},]} label="47.1 Surnames" name="surename47">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="47.2 Given Names" name="givenName47">
+                                                    <Form.Item rules={[{required: true,},]} label="47.2 Given Names" name="givenName47">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="47.3 Relationship to You" name="relationshipToYou47">
+                                                    <Form.Item rules={[{required: true,},]} label="47.3 Relationship to You" name="relationshipToYou47">
                                                         <Select
                                                             initialvalue=""
                                                             options={[
@@ -305,7 +305,7 @@ export const Ninth = () => {
                                                     </Form.Item>
                                                 </Col>
                                                 <Col span={24}>
-                                                    <Form.Item label="47.4 Relative's Status"
+                                                    <Form.Item rules={[{required: true,},]} label="47.4 Relative's Status"
                                                                name="relativeStatus47">
                                                         <Select
                                                             initialvalue=""
@@ -334,7 +334,7 @@ export const Ninth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="48. Do you have any other relatives in the United States?"
+                                    <Form.Item rules={[{required: true,},]} label="48. Do you have any other relatives in the United States?"
                                                name="otherRelatives48">
                                         <Select
                                             initialvalue=""
@@ -357,6 +357,11 @@ export const Ninth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.EIGHTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.TENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

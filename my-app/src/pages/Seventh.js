@@ -11,8 +11,8 @@ export const Seventh = () => {
     const [visible34, setVisible34] = useState(false)
 
     const [form] = Form.useForm();
-    const selectedValue33 = Form.useWatch("select37", form);
-    const selectedValue34 = Form.useWatch("select38", form);
+    const selectedValue33 = Form.useWatch("Passport-book-number", form);
+    const selectedValue34 = Form.useWatch("passport-lost-stolen", form);
 
 
 
@@ -47,7 +47,7 @@ export const Seventh = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="35.P Passport/Travel Document Type"
                                         name="select36">
                                         <Select
@@ -77,12 +77,12 @@ export const Seventh = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="36. Passport/Travel Document Number" name="passportNumber36">
+                                    <Form.Item rules={[{required: true,},]} label="36. Passport/Travel Document Number" name="passportNumber36">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="37. Passport Book Number" name="select37">
+                                    <Form.Item rules={[{required: true,},]} label="37. Passport Book Number" name="Passport-book-number">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -102,7 +102,7 @@ export const Seventh = () => {
                                         <Col offset={2} span={22}>
                                             <span>
                                                 <p className="text">Does Not Apply</p>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="37.1"
                                                     name="37.1">
                                                     <Input/>
@@ -112,7 +112,7 @@ export const Seventh = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="38. Country/Authority that Issued Passport/Travel Document" name="country38">
                                         <Select
                                             initialvalue=""
@@ -120,20 +120,20 @@ export const Seventh = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="39. Where was the Passport/Travel Document Issued?" name="passportIssued39">
+                                    <Form.Item rules={[{required: true,},]} label="39. Where was the Passport/Travel Document Issued?" name="passportIssued39">
                                         <div>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="39.1 City" name="city39">
+                                                <Form.Item rules={[{required: true,},]} label="39.1 City" name="city39">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="39.2 State/Province" name="state39">
+                                                <Form.Item rules={[{required: true,},]} label="39.2 State/Province" name="state39">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="39.3 Country/Region" name="country39">
                                                     <Select
                                                         initialvalue=""
@@ -142,10 +142,10 @@ export const Seventh = () => {
                                             </Col>
                                             <Col offset={2} span={22}>
                                                 <div className="lengthOfStay">
-                                                    <Form.Item label="39.4 Issuance Date" name="issuanceDate39">
+                                                    <Form.Item rules={[{required: true,},]} label="39.4 Issuance Date" name="issuanceDate39">
                                                         <DatePicker/>
                                                     </Form.Item>
-                                                    <Form.Item label="39.5 Expiration Date" name="expirationDate39">
+                                                    <Form.Item rules={[{required: true,},]} label="39.5 Expiration Date" name="expirationDate39">
                                                         <DatePicker/>
                                                     </Form.Item>
                                                 </div>
@@ -154,7 +154,7 @@ export const Seventh = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="40. Have you ever lost a passport or had one stolen?" name="select38">
+                                    <Form.Item rules={[{required: true,},]} label="40. Have you ever lost a passport or had one stolen?" name="passport-lost-stolen">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -172,17 +172,17 @@ export const Seventh = () => {
                                 {visible34 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                                <Form.Item label="40.1 Passport/Travel Document Number" name="passportNumber40">
+                                                <Form.Item rules={[{required: true,},]} label="40.1 Passport/Travel Document Number" name="passportNumber40">
                                                     <Input/>
                                                 </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="40.2 Country/Authority that Issued Passport/Travel Document" name="authority40">
+                                            <Form.Item rules={[{required: true,},]} label="40.2 Country/Authority that Issued Passport/Travel Document" name="authority40">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="40.3 Explain" name="explain40">
+                                            <Form.Item rules={[{required: true,},]} label="40.3 Explain" name="explain40">
                                                 <textarea id="textar40" name="textar40" rows="6" cols="50"></textarea>
                                             </Form.Item>
                                         </Col>
@@ -195,6 +195,11 @@ export const Seventh = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SIXTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.EIGHTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

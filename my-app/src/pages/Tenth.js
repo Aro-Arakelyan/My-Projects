@@ -21,23 +21,23 @@ export const Tenth = () => {
                             <Row>
                                 <span className="subtitle">Spouse's Full Name (include Maiden Name)</span>
                                 <Col span={24}>
-                                    <Form.Item label="49. Spouse's Surnames" name="spouseSurename49">
+                                    <Form.Item rules={[{required: true,},]} label="49. Spouse's Surnames" name="spouseSurename49">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="50. Spouse's Given Names" name="spouseGivenName">
+                                    <Form.Item rules={[{required: true,},]} label="50. Spouse's Given Names" name="spouseGivenName">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="51. Spouse's Date of Birth" name="spouseBirthday51">
+                                    <Form.Item rules={[{required: true,},]} label="51. Spouse's Date of Birth" name="spouseBirthday51">
                                         <DatePicker/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="44. Relationship to You" name="relationshipToYou44">
+                                    <Form.Item rules={[{required: true,},]}
+                                        label="52. Relationship to You" name="relationshipToYou44">
                                         <Select
                                             initialvalue=""
                                             options={country()}/>
@@ -45,19 +45,19 @@ export const Tenth = () => {
                                 </Col>
                                 <span>53. Spouse's Place of Birth</span>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="53.1 City" name="city53">
+                                    <Form.Item rules={[{required: true,},]} label="53.1 City" name="city53">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="53.2 Country/Region" name="country53">
+                                    <Form.Item rules={[{required: true,},]} label="53.2 Country/Region" name="country53">
                                     <Select
                                         initialvalue=""
                                         options={country()}/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="54. Spouse's Address" name="spouseAddress54">
                                         <Select
                                             initialvalue=""
@@ -92,6 +92,11 @@ export const Tenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.NINTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.ELEVENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

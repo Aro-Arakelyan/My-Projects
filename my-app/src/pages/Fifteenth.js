@@ -16,13 +16,13 @@ export const Fifteenth = () => {
 
 
     const [form] = Form.useForm();
-    const selectedValue53 = Form.useWatch("select57", form);
-    const selectedValue54 = Form.useWatch("select58", form);
-    const selectedValue55 = Form.useWatch("select59", form);
-    const selectedValue56 = Form.useWatch("select60", form);
-    const selectedValue57 = Form.useWatch("select61", form);
-    const selectedValue58 = Form.useWatch("select62", form);
-    const selectedValue59 = Form.useWatch("select63", form);
+    const selectedValue53 = Form.useWatch("arrested-or-convicted", form);
+    const selectedValue54 = Form.useWatch("violated-or-engaged", form);
+    const selectedValue55 = Form.useWatch("prostitution-or-procuring-prostitutes", form);
+    const selectedValue56 = Form.useWatch("money-laundering", form);
+    const selectedValue57 = Form.useWatch("human-trafficking", form);
+    const selectedValue58 = Form.useWatch("human-trafficking-outside-US", form);
+    const selectedValue59 = Form.useWatch("relative-human-trafficking", form);
 
 
 
@@ -96,9 +96,9 @@ export const Fifteenth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="70. Have you ever been arrested or convicted for any offense or crime, even though subject of a pardon, amnesty, or other similar action?"
-                                        name="select57">
+                                        name="arrested-or-convicted">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -116,16 +116,16 @@ export const Fifteenth = () => {
                                 {visible53 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="70.1 Explain" name="explain70">
+                                            <Form.Item rules={[{required: true,},]} label="70.1 Explain" name="explain70">
                                                 <textarea id="textar70" name="textar70" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="71. Have you ever violated, or engaged in a conspiracy to violate, any law relating to controlled substances?"
-                                        name="select58">
+                                        name="violated-or-engaged">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -143,16 +143,16 @@ export const Fifteenth = () => {
                                 {visible54 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="71.1 Explain" name="explain71">
+                                            <Form.Item rules={[{required: true,},]} label="71.1 Explain" name="explain71">
                                                 <textarea id="textar71" name="textar71" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="72. Are you coming to the United States to engage in prostitution or unlawful commercialized vice or have you been engaged in prostitution or procuring prostitutes within the past 10 years?"
-                                        name="select59">
+                                        name="prostitution-or-procuring-prostitutes">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -170,16 +170,16 @@ export const Fifteenth = () => {
                                 {visible55 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="72.1 Explain" name="explain72">
+                                            <Form.Item rules={[{required: true,},]} label="72.1 Explain" name="explain72">
                                                 <textarea id="textar72" name="textar72" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="73. Have you ever been involved in, or do you seek to engage in, money laundering?"
-                                        name="select60">
+                                        name="money-laundering">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -197,16 +197,16 @@ export const Fifteenth = () => {
                                 {visible56 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="73.1 Explain" name="explain73">
+                                            <Form.Item rules={[{required: true,},]} label="73.1 Explain" name="explain73">
                                                 <textarea id="textar73" name="textar73" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="74. Have you ever committed or conspired to commit a human trafficking offense in the United States or outside the United States?"
-                                        name="select61">
+                                        name="human-trafficking">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -224,16 +224,16 @@ export const Fifteenth = () => {
                                 {visible57 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="74.1 Explain" name="explain74">
+                                            <Form.Item rules={[{required: true,},]} label="74.1 Explain" name="explain74">
                                                 <textarea id="textar74" name="textar74" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="75. Have you ever knowingly aided, abetted, assisted or colluded with an individual who has committed, or conspired to commit a severe human trafficking offense in the United States or outside the United States?"
-                                        name="select62">
+                                        name="human-trafficking-outside-US">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -251,16 +251,16 @@ export const Fifteenth = () => {
                                 {visible58 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="75.1 Explain" name="explain75">
+                                            <Form.Item rules={[{required: true,},]} label="75.1 Explain" name="explain75">
                                                 <textarea id="textar75" name="textar75" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="76. Are you the spouse, son, or daughter of an individual who has committed or conspired to commit a human trafficking offense in the United States or outside the United States and have you within the last five years, knowingly benefited from the trafficking activities?"
-                                        name="select63">
+                                        name="relative-human-trafficking">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -278,7 +278,7 @@ export const Fifteenth = () => {
                                 {visible59 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="76.1 Explain" name="explain76">
+                                            <Form.Item rules={[{required: true,},]} label="76.1 Explain" name="explain76">
                                                 <textarea id="textar76" name="textar76" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
@@ -291,6 +291,11 @@ export const Fifteenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.FOURTEENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.SIXTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

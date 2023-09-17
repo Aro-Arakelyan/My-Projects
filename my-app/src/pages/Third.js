@@ -26,17 +26,16 @@ export const Third = () => {
     const [visible17, setVisible17] = useState(false)
 
 
-
     const [form] = Form.useForm();
 
-    const selectedValue10 = Form.useWatch("select10", form);
-    const selectedValue11 = Form.useWatch("select10", form);
-    const selectedValue12 = Form.useWatch("select10", form);
-    const selectedValue13 = Form.useWatch("select10", form);
-    const selectedValue14 = Form.useWatch("select17", form);
-    const selectedValue15 = Form.useWatch("select17", form);
-    const selectedValue16 = Form.useWatch("select17", form);
-    const selectedValue17 = Form.useWatch("select17", form);
+    const selectedValue10 = Form.useWatch("Specify", form);
+    const selectedValue11 = Form.useWatch("Specify", form);
+    const selectedValue12 = Form.useWatch("Specify", form);
+    const selectedValue13 = Form.useWatch("Specify", form);
+    const selectedValue14 = Form.useWatch("travel-plans", form);
+    const selectedValue15 = Form.useWatch("travel-plans", form);
+    const selectedValue16 = Form.useWatch("Person/Entity", form);
+    const selectedValue17 = Form.useWatch("Person/Entity", form);
 
 
     useEffect(() => {
@@ -64,7 +63,7 @@ export const Third = () => {
     }, [selectedValue12, visible12])
 
     useEffect(() => {
-        if (selectedValue13=== "d. (K4) CHILD OF A K3") {
+        if (selectedValue13 === "d. (K4) CHILD OF A K3") {
             setVisible13(true)
         } else {
             setVisible13(false)
@@ -104,7 +103,6 @@ export const Third = () => {
     }, [selectedValue17, visible17])
 
 
-
     const handleSubmit = (values) => {
         console.log(values)
     }
@@ -119,14 +117,14 @@ export const Third = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="15. Purpose of Trip to the U.S." name="fifteen">
+                                    <Form.Item rules={[{required: true,},]} label="15. Purpose of Trip to the U.S." name="fifteen">
                                         <Select
                                             initialvalue=""
                                             options={purposeOfTrip()}/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="16. Specify" name="select10">
+                                    <Form.Item rules={[{required: true,},]} label="16. Specify" name="Specify">
                                         <Select
                                             initialvalue=""
                                             options={specify()}/>
@@ -135,7 +133,7 @@ export const Third = () => {
                                 {visible10 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="16.11 Application Receipt/Petition Number"
+                                            <Form.Item rules={[{required: true,},]} label="16.11 Application Receipt/Petition Number"
                                                        name="sixteenEleven">
                                                 <Input/>
                                             </Form.Item>
@@ -145,13 +143,13 @@ export const Third = () => {
                                 {visible11 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="16.1 Surname" name="sixteenEleven1">
+                                            <Form.Item rules={[{required: true,},]} label="16.1 Surname" name="sixteenEleven1">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="16.2 Name" name="sixteenEleven2">
+                                            <Form.Item rules={[{required: true,},]} label="16.2 Name" name="sixteenEleven2">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="16.11 Application Receipt/Petition Number"
+                                            <Form.Item rules={[{required: true,},]} label="16.11 Application Receipt/Petition Number"
                                                        name="sixteenEleven3">
                                                 <Input/>
                                             </Form.Item>
@@ -162,7 +160,7 @@ export const Third = () => {
                                 {visible12 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="16.11 Application Receipt/Petition Number"
+                                            <Form.Item rules={[{required: true,},]} label="16.11 Application Receipt/Petition Number"
                                                        name="sixteenEleven">
                                                 <Input/>
                                             </Form.Item>
@@ -172,13 +170,13 @@ export const Third = () => {
                                 {visible13 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="16.1 Surname" name="surename">
+                                            <Form.Item rules={[{required: true,},]} label="16.1 Surname" name="surename">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="16.2 Name" name="name">
+                                            <Form.Item rules={[{required: true,},]} label="16.2 Name" name="name">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="16.11 Application Receipt/Petition Number"
+                                            <Form.Item rules={[{required: true,},]} label="16.11 Application Receipt/Petition Number"
                                                        name="petitionNumber">
                                                 <Input/>
                                             </Form.Item>
@@ -187,7 +185,7 @@ export const Third = () => {
 
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="17. Have you made specific travel plans?" name="select17">
+                                    <Form.Item rules={[{required: true,},]} label="17. Have you made specific travel plans?" name="travel-plans">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -206,12 +204,12 @@ export const Third = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.1.2.3 Intended Date of Arrival" name="select6">
+                                                <Form.Item rules={[{required: true,},]} label="17.1.2.3 Intended Date of Arrival" name="select6">
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={20}>
-                                                <Form.Item label="17.4.5 Intended Length of Stay in U.S."
+                                                <Form.Item rules={[{required: true,},]} label="17.4.5 Intended Length of Stay in U.S."
                                                            name="select6">
                                                     <div className="lengthOfStay">
                                                         <Select className="select"
@@ -224,17 +222,17 @@ export const Third = () => {
                                                 </Form.Item>
                                             </Col>
                                             <Col span={24}>
-                                                <Form.Item label="17.17 Street Address" name="address">
+                                                <Form.Item rules={[{required: true,},]} label="17.17 Street Address" name="address">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col span={24}>
-                                                <Form.Item label="17.18 City" name="city">
+                                                <Form.Item rules={[{required: true,},]} label="17.18 City" name="city">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col span={24}>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="17.19 State/Province" name="province">
                                                     <Select
                                                         initialvalue=""
@@ -242,7 +240,7 @@ export const Third = () => {
                                                 </Form.Item>
                                             </Col>
                                             <Col span={24}>
-                                                <Form.Item label="17.20 Postal Zone/ZIP Code" name="postal">
+                                                <Form.Item rules={[{required: true,},]} label="17.20 Postal Zone/ZIP Code" name="postal">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -253,55 +251,57 @@ export const Third = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.6.7.8 Date of Arrival in U.S." name="arrivalDate">
+                                                <Form.Item rules={[{required: true,},]} label="17.6.7.8 Date of Arrival in U.S." name="arrivalDate">
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.9 Arrival Flight (if known)" name="arrivalFlight">
+                                                <Form.Item rules={[{required: true,},]} label="17.9 Arrival Flight (if known)" name="arrivalFlight">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.10 Arrival City" name="arrivalCity">
+                                                <Form.Item rules={[{required: true,},]} label="17.10 Arrival City" name="arrivalCity">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.11.12.13 Date of Departure from U.S."
+                                                <Form.Item rules={[{required: true,},]} label="17.11.12.13 Date of Departure from U.S."
                                                            name="departureDate">
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.14 Departure Flight (if known)" name="departureFlight">
+                                                <Form.Item rules={[{required: true,},]} label="17.14 Departure Flight (if known)"
+                                                           name="departureFlight">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.15 Departure City" name="departCity">
+                                                <Form.Item rules={[{required: true,},]} label="17.15 Departure City" name="departCity">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="17.16 Provide the locations you plan to visit in the U.S.:"
                                                     name="visitPlan">
-                                                    <textarea id="textar17" name="textar17" rows="6" cols="50"></textarea>
+                                                    <textarea id="textar17" name="textar17" rows="6"
+                                                              cols="50"></textarea>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.17 Street Address" name="strAdd">
+                                                <Form.Item rules={[{required: true,},]} label="17.17 Street Address" name="strAdd">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.18 City" name="depCity">
+                                                <Form.Item rules={[{required: true,},]} label="17.18 City" name="depCity">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="17.19 State/Province" name="province">
                                                     <Select
                                                         initialvalue=""
@@ -309,7 +309,7 @@ export const Third = () => {
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="17.20 Postal Zone/ZIP Code" name="postal">
+                                                <Form.Item rules={[{required: true,},]} label="17.20 Postal Zone/ZIP Code" name="postal">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -317,7 +317,7 @@ export const Third = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="18. Person/Entity Paying for Your Trip" name="select18">
+                                    <Form.Item rules={[{required: true,},]} label="18. Person/Entity Paying for Your Trip" name="Person/Entity">
                                         <Select
                                             initialvalue=""
                                             options={personPay()}/>
@@ -327,28 +327,28 @@ export const Third = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="18.1 Surnames of Person Paying for Trip"
-                                                           name="surnameOfPerson">
+                                                <Form.Item  label="18.1 Surnames of Person Paying for Trip"
+                                                           name="surnameOfPerson" rules={[{required: true,},]}>
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="18.2 Given Names of Person Paying for Trip"
-                                                           name="givenNameOfPerson">
+                                                           name="givenNameOfPerson" rules={[{required: true,},]}>
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item label="18.3 Telephone Number"
-                                                           name="telephone">
+                                                           name="telephone" rules={[{required: true,},]}>
                                                     <Input/>
                                                 </Form.Item>
                                                 <Form.Item type="email" label="18.4 Email Address"
-                                                           name="emailAddress">
-                                                    <Input/>
+                                                           name="emailAddress" rules={[{required: true,},]}>
+                                                    <Input type="email"/>
                                                 </Form.Item>
-                                                <Form.Item label="18.5 Relationship to You" name="relationship">
+                                                <Form.Item rules={[{required: true,},]} label="18.5 Relationship to You" name="relationship">
                                                     <Select
                                                         initialvalue=""
                                                         options={relationship()}/>
                                                 </Form.Item>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="19. Is the address of the party paying for your trip the same as your Home or Mailing Address?"
                                                     name="addressIsSame">
                                                     <Select
@@ -372,23 +372,23 @@ export const Third = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="20. Street Address"
+                                                <Form.Item rules={[{required: true,},]} label="20. Street Address"
                                                            name="streetAddress">
                                                     <Input/>
                                                 </Form.Item>
-                                                <Form.Item label="20.1 City"
+                                                <Form.Item rules={[{required: true,},]} label="20.1 City"
                                                            name="city">
                                                     <Input/>
                                                 </Form.Item>
-                                                <Form.Item label="20.2 State/Province"
+                                                <Form.Item rules={[{required: true,},]} label="20.2 State/Province"
                                                            name="province">
                                                     <Input/>
                                                 </Form.Item>
-                                                <Form.Item label="20.3 Postal Zone/ZIP Code"
+                                                <Form.Item rules={[{required: true,},]} label="20.3 Postal Zone/ZIP Code"
                                                            name="postalCode">
                                                     <Input/>
                                                 </Form.Item>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="20.4 Country/Region" name="countryRegion">
                                                     <Select
                                                         initialvalue=""
@@ -405,6 +405,11 @@ export const Third = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SECOND)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FOURTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

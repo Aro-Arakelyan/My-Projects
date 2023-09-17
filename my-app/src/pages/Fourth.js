@@ -10,8 +10,8 @@ export const Fourth = () => {
     const [visible20, setVisible20] = useState(false)
 
     const [form] = Form.useForm();
-    const selectedValue18 = Form.useWatch("select18", form);
-    const selectedValue19 = Form.useWatch("select19", form);
+    const selectedValue18 = Form.useWatch("other-persons-with-you", form);
+    const selectedValue19 = Form.useWatch("group-organization", form);
     const selectedValue20 = Form.useWatch("select20", form);
 
 
@@ -32,7 +32,7 @@ export const Fourth = () => {
     }, [selectedValue19, visible19])
 
     useEffect(() => {
-        if (selectedValue20 === "no") {
+        if (selectedValue19 === "no") {
             setVisible20(true)
         } else {
             setVisible20(false)
@@ -53,7 +53,7 @@ export const Fourth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={23}>
-                                    <Form.Item label="21. Are there other persons traveling with you?" name="select18">
+                                    <Form.Item rules={[{required: true,},]} label="21. Are there other persons traveling with you?" name="other-persons-with-you">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -71,9 +71,9 @@ export const Fourth = () => {
                                 {visible18 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={21}>
-                                            <Form.Item
+                                            <Form.Item rules={[{required: true,},]}
                                                 label="21.1 Are you traveling as part of a group or organization?"
-                                                name="select19">
+                                                name="group-organization">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -91,7 +91,7 @@ export const Fourth = () => {
                                         {visible19 && <Col span={24}>
                                             <Row>
                                                 <Col offset={4} span={19}>
-                                                    <Form.Item label="21.1.1 Group Name" name="groupName">
+                                                    <Form.Item rules={[{required: true,},]} label="21.1.1 Group Name" name="select211">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
@@ -100,17 +100,48 @@ export const Fourth = () => {
                                         {visible20 && <Col span={23}>
                                             <Row>
                                                 <Col offset={2} span={21}>
-                                                    <Form.Item label="21.1.2 Surnames of Person Traveling With You"
+                                                    <Form.Item rules={[{required: true,},]} label="21.1.2 Surnames of Person Traveling With You"
                                                                name="surnamesWithYou">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="21.1.3 Given Names of Person Traveling With You"
+                                                    <Form.Item rules={[{required: true,},]} label="21.1.3 Given Names of Person Traveling With You"
                                                                name="namesWithYou">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="21.1.4 Relationship with Person"
+                                                    <Form.Item rules={[{required: true,},]} label="21.1.4 Relationship with Person"
                                                                name="relationshipWithPerson">
-                                                        <Input/>
+                                                        <Select
+                                                            initialvalue=""
+                                                            options={[
+                                                                {
+                                                                    label: "a. Parrent",
+                                                                    value: "a. Parrent"
+                                                                },
+                                                                {
+                                                                    label: "b. Spouse",
+                                                                    value: "b. Spouse"
+                                                                },
+                                                                {
+                                                                    label: "c. Child",
+                                                                    value: "c. Child"
+                                                                },
+                                                                {
+                                                                    label: "d. Օther relative",
+                                                                    value: "d. Օther relative"
+                                                                },
+                                                                {
+                                                                    label: "e. Friend",
+                                                                    value: "e. Friend"
+                                                                },
+                                                                {
+                                                                    label: "f. Colleague",
+                                                                    value: "f. Colleague"
+                                                                },
+                                                                {
+                                                                    label: "g. Other",
+                                                                    value: "g. Other"
+                                                                }
+                                                            ]}/>
                                                     </Form.Item>
                                                 </Col>
                                             </Row>
@@ -124,6 +155,11 @@ export const Fourth = () => {
                 <Col offset={2} span={21}>
                     <Button type="primary" onClick={() => navigate(router.THIRD)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FIFTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

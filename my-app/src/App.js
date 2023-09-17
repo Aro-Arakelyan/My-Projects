@@ -46,7 +46,6 @@ function App() {
                 <Route path={router.SIXTEENTH} element={<Sixteenth/>}/>
                 <Route path={router.SEVENTEENTH} element={<Seventeenth/>}/>
                 <Route path={router.EIGHTEENTH} element={<Eighteenth/>}/>
-
             </Routes>
         </BrowserRouter>
     );

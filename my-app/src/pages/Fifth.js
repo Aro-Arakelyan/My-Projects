@@ -18,14 +18,13 @@ export const Fifth = () => {
 
 
     const [form] = Form.useForm();
-    const selectedValue21 = Form.useWatch("select21", form);
-    const selectedValue22 = Form.useWatch("select22", form);
-    const selectedValue23 = Form.useWatch("select23", form);
-    const selectedValue24 = Form.useWatch("select27", form);
-    const selectedValue25 = Form.useWatch("select28", form);
-    const selectedValue26 = Form.useWatch("select29", form);
-    const selectedValue27 = Form.useWatch("select30", form);
-
+    const selectedValue21 = Form.useWatch("U.S.been", form);
+    const selectedValue22 = Form.useWatch("US-driver-license", form);
+    const selectedValue23 = Form.useWatch("issued-US-Visa", form);
+    const selectedValue24 = Form.useWatch("lost-stolen-visa", form);
+    const selectedValue25 = Form.useWatch("cancelled-revoked-visa", form);
+    const selectedValue26 = Form.useWatch("refused-US-Visa", form);
+    const selectedValue27 = Form.useWatch("immigrant-petition", form);
 
 
     useEffect(() => {
@@ -98,7 +97,7 @@ export const Fifth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={23}>
-                                    <Form.Item label="22. Have you ever been in the U.S.?" name="select21">
+                                    <Form.Item rules={[{required: true,},]} label="22. Have you ever been in the U.S.?" name="U.S.been">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -116,12 +115,12 @@ export const Fifth = () => {
                                 {visible21 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="22.1.2.3 Date Arrived" name="arrivedDate">
+                                            <Form.Item rules={[{required: true,},]} label="22.1.2.3 Date Arrived" name="arrivedDate">
                                                 <DatePicker/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={21}>
-                                            <Form.Item label="22.4.5 Length of Stay"
+                                            <Form.Item rules={[{required: true,},]} label="22.4.5 Length of Stay"
                                                        name="intendedLength">
                                                 <div className="lengthOfStay">
                                                     <Select className="select"
@@ -134,7 +133,7 @@ export const Fifth = () => {
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={21}>
-                                            <Form.Item label="22.6 Do you or did you ever hold a U.S. Driver’s License?" name="select22">
+                                            <Form.Item rules={[{required: true,},]} label="22.6 Do you or did you ever hold a U.S. Driver’s License?" name="US-driver-license">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -152,12 +151,12 @@ export const Fifth = () => {
                                         {visible22 && <Col span={24}>
                                             <Row>
                                                 <Col offset={4} span={19}>
-                                                    <Form.Item label="22.6.1 Driver's License Number" name="licenseNumber">
+                                                    <Form.Item rules={[{required: true,},]} label="22.6.1 Driver's License Number" name="licenseNumber">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col offset={4} span={19}>
-                                                    <Form.Item
+                                                    <Form.Item rules={[{required: true,},]}
                                                         label="22.6.2 State of Driver's License" name="licenseState">
                                                         <Select
                                                             initialvalue=""
@@ -169,7 +168,7 @@ export const Fifth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={23}>
-                                    <Form.Item label="23. Have you ever been issued a U.S. Visa?" name="select23">
+                                    <Form.Item rules={[{required: true,},]} label="23. Have you ever been issued a U.S. Visa?" name="issued-US-Visa">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -187,17 +186,17 @@ export const Fifth = () => {
                                 {visible23 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.1.2.3 Date Last Visa Was Issued" name="lastVisaDate">
+                                            <Form.Item rules={[{required: true,},]} label="23.1.2.3 Date Last Visa Was Issued" name="lastVisaDate">
                                                 <DatePicker/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.4 Visa Number" name="visaNumber">
+                                            <Form.Item rules={[{required: true,},]} label="23.4 Visa Number" name="visaNumber">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.5 Are you applying for the same type of visa?" name="select24">
+                                            <Form.Item rules={[{required: true,},]} label="23.5 Are you applying for the same type of visa?" name="select24">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -213,7 +212,7 @@ export const Fifth = () => {
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.6 Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal of residence? " name="select25">
+                                            <Form.Item rules={[{required: true,},]} label="23.6 Are you applying in the same country or location where the visa above was issued, and is this country or location your place of principal of residence? " name="select25">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -229,7 +228,7 @@ export const Fifth = () => {
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.7 Have you been ten-printed?" name="select26">
+                                            <Form.Item rules={[{required: true,},]} label="23.7 Have you been ten-printed?" name="select26">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -245,7 +244,7 @@ export const Fifth = () => {
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.8 Has your U.S. Visa ever been lost or stolen?" name="select27">
+                                            <Form.Item rules={[{required: true,},]} label="23.8 Has your U.S. Visa ever been lost or stolen?" name="lost-stolen-visa">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -263,14 +262,14 @@ export const Fifth = () => {
                                         {visible24 && <Col span={24}>
                                             <Row>
                                                 <Col offset={4} span={20}>
-                                                    <Form.Item label="23.8.1 Enter year visa was lost or stolen:" name="visaLostYear">
+                                                    <Form.Item rules={[{required: true,},]} label="23.8.1 Enter year visa was lost or stolen:" name="visaLostYear">
                                                         <Select
                                                             initialvalue=""
                                                             options={year()}/>
                                                     </Form.Item>
                                                 </Col>
                                                 <Col offset={4} span={20}>
-                                                    <Form.Item
+                                                    <Form.Item rules={[{required: true,},]}
                                                         label="23.8.2 Explain" name="explain">
                                                         <textarea id="textar23" name="textar23" rows="6" cols="50"></textarea>
                                                     </Form.Item>
@@ -278,7 +277,7 @@ export const Fifth = () => {
                                             </Row>
                                         </Col>}
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="23.9 Has your U.S. Visa ever been cancelled or revoked?" name="select28">
+                                            <Form.Item rules={[{required: true,},]} label="23.9 Has your U.S. Visa ever been cancelled or revoked?" name="cancelled-revoked-visa">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -296,7 +295,7 @@ export const Fifth = () => {
                                         {visible25 && <Col span={24}>
                                             <Row>
                                                 <Col offset={4} span={20}>
-                                                    <Form.Item
+                                                    <Form.Item rules={[{required: true,},]}
                                                         label="23.9.1 Explain" name="explains">
                                                         <textarea id="textar" name="textar" rows="6" cols="50"></textarea>
                                                     </Form.Item>
@@ -307,7 +306,7 @@ export const Fifth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={23}>
-                                    <Form.Item label="24. Have you ever been refused a U.S. Visa, or been refused admission to the United States, or withdrawn your application for admission at the port of entry?" name="select29">
+                                    <Form.Item rules={[{required: true,},]} label="24. Have you ever been refused a U.S. Visa, or been refused admission to the United States, or withdrawn your application for admission at the port of entry?" name="refused-US-Visa">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -325,7 +324,7 @@ export const Fifth = () => {
                                 {visible26 && <Col span={24}>
                                     <Row>
                                         <Col offset={4} span={20}>
-                                            <Form.Item
+                                            <Form.Item rules={[{required: true,},]}
                                                 label="24.1 Explain" name="explain24">
                                                 <textarea id="textar24" name="textar24" rows="6" cols="50"></textarea>
                                             </Form.Item>
@@ -333,7 +332,7 @@ export const Fifth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={23}>
-                                    <Form.Item label="25. Has anyone ever filed an immigrant petition on your behalf with the United States Citizenship and Immigration Services?" name="select30">
+                                    <Form.Item rules={[{required: true,},]} label="25. Has anyone ever filed an immigrant petition on your behalf with the United States Citizenship and Immigration Services?" name="immigrant-petition">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -351,7 +350,7 @@ export const Fifth = () => {
                                 {visible27 && <Col span={24}>
                                     <Row>
                                         <Col offset={4} span={20}>
-                                            <Form.Item
+                                            <Form.Item rules={[{required: true,},]}
                                                 label="25.1 Explain" name="explain25">
                                                 <textarea id="textar25" name="textar25" rows="6" cols="50"></textarea>
                                             </Form.Item>

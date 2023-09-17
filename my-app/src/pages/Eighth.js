@@ -20,22 +20,22 @@ export const Eighth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="41. Contact Person Surnames" name="contactPerson41">
+                                    <Form.Item rules={[{required: true,},]} label="41. Contact Person Surnames" name="contactPerson41">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="42. Given Names " name="givenNames42">
+                                    <Form.Item rules={[{required: true,},]} label="42. Given Names " name="givenNames42">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="43. Organization Name " name="organizationName43">
+                                    <Form.Item rules={[{required: true,},]} label="43. Organization Name " name="organizationName43">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="44. Relationship to You" name="relationshipToYou44">
                                         <Select
                                             initialvalue=""
@@ -74,34 +74,34 @@ export const Eighth = () => {
                                 <Col span={24}>
                                     <span>Address and Phone Number of Point of Contact</span>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.1 Street" name="street44">
+                                            <Form.Item rules={[{required: true,},]} label="44.1 Street" name="street44">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.2 City" name="city44">
+                                            <Form.Item rules={[{required: true,},]} label="44.2 City" name="city44">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.3 State" name="state44">
+                                            <Form.Item rules={[{required: true,},]} label="44.3 State" name="state44">
                                                 <Select
                                                     initialvalue=""
                                                     options={province()}/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.4 Zip Code" name="zipCode44">
+                                            <Form.Item rules={[{required: true,},]} label="44.4 Zip Code" name="zipCode44">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.5 Phone Number" name="phoneNumber44">
+                                            <Form.Item rules={[{required: true,},]} label="44.5 Phone Number" name="phoneNumber44">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="44.6 Email Address" name="emailAddress44">
+                                            <Form.Item rules={[{required: true,},]} label="44.6 Email Address" name="emailAddress44">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
@@ -113,6 +113,11 @@ export const Eighth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SEVENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.NINTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

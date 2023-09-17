@@ -12,7 +12,20 @@ export let purposeOfTrip = () => {
         "_H_Temporary_worker",
         "_I_Foreign_media_representative",
         "_J_Exchange_visitor",
-        "_K_Fiance_or_spouse_of_a_U.S._citizen"
+        "_K_Fiance_or_spouse_of_a_U.S._citizen",
+        "_L_Intracompany_transferee",
+        "_M_Vocational_Nonacademic_student",
+        "_N_Other",
+        "_NATO_Nato_staff",
+        "_O_Alien_with_extraordinary_ability",
+        "_P_Internatioanly_recognized_alien",
+        "_Q_Cultural_exchange_visitor",
+        "_R_Religious_worker",
+        "_S_Informant_or_witness",
+        "_T_Victim_of_trafficking",
+        "_TD_TN_Nafta_professional",
+        "_U_Victim_of_criminal_activity",
+        "_PARCIS_Parole_beneficiary"
         ];
     for(let i = 0; i < purposeOfTrip.length; i++) {
         purpose.push({label: purposeOfTrip[i], value: purposeOfTrip[i]})

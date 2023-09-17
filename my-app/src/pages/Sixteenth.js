@@ -21,18 +21,18 @@ export const Sixteenth = () => {
 
 
     const [form] = Form.useForm();
-    const selectedValue60 = Form.useWatch("select64", form);
-    const selectedValue61 = Form.useWatch("select65", form);
-    const selectedValue62 = Form.useWatch("select66", form);
-    const selectedValue63 = Form.useWatch("select67", form);
-    const selectedValue64 = Form.useWatch("select68", form);
-    const selectedValue65 = Form.useWatch("select69", form);
-    const selectedValue66 = Form.useWatch("select70", form);
-    const selectedValue67 = Form.useWatch("select71", form);
-    const selectedValue68 = Form.useWatch("select72", form);
-    const selectedValue69 = Form.useWatch("select73", form);
-    const selectedValue70 = Form.useWatch("select74", form);
-    const selectedValue71 = Form.useWatch("select75", form);
+    const selectedValue60 = Form.useWatch("espionage-sabotage", form);
+    const selectedValue61 = Form.useWatch("terrorist-activities", form);
+    const selectedValue62 = Form.useWatch("terrorists-support", form);
+    const selectedValue63 = Form.useWatch("member-or-representative", form);
+    const selectedValue64 = Form.useWatch("relative-of-terrorists-support", form);
+    const selectedValue65 = Form.useWatch("participated-in-genocide", form);
+    const selectedValue66 = Form.useWatch("participated-in-torture", form);
+    const selectedValue67 = Form.useWatch("acts-of-violence", form);
+    const selectedValue68 = Form.useWatch("recruitment-of-child-soldiers?", form);
+    const selectedValue69 = Form.useWatch("violations-of-religious-freedom?", form);
+    const selectedValue70 = Form.useWatch("forcing to abortion", form);
+    const selectedValue71 = Form.useWatch("coercive-transplantation", form);
 
 
 
@@ -146,9 +146,9 @@ export const Sixteenth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="77. Do you seek to engage in espionage, sabotage, export control violations, or any other illegal activity while in the United States?"
-                                        name="select64">
+                                        name="espionage-sabotage">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -166,16 +166,16 @@ export const Sixteenth = () => {
                                 {visible60 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="77.1 Explain" name="explain77">
+                                            <Form.Item rules={[{required: true,},]} label="77.1 Explain" name="explain77">
                                                 <textarea id="textar77" name="textar77" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="78. Do you seek to engage in terrorist activities while in the United States or have you ever engaged in terrorist activities?"
-                                        name="select65">
+                                        name="terrorist-activities">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -193,16 +193,16 @@ export const Sixteenth = () => {
                                 {visible61 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="78.1 Explain" name="explain78">
+                                            <Form.Item rules={[{required: true,},]} label="78.1 Explain" name="explain78">
                                                 <textarea id="textar78" name="textar78" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="79. Have you ever or do you intend to provide financial assistance or other support to terrorists or terrorist organizations?"
-                                        name="select66">
+                                        name="terrorists-support">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -220,16 +220,16 @@ export const Sixteenth = () => {
                                 {visible62 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="79.1 Explain" name="explain79">
+                                            <Form.Item rules={[{required: true,},]} label="79.1 Explain" name="explain79">
                                                 <textarea id="textar79" name="textar79" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="80. Are you a member or representative of a terrorist organization?"
-                                        name="select67">
+                                        name="member-or-representative">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -247,16 +247,16 @@ export const Sixteenth = () => {
                                 {visible63 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="80.1 Explain" name="explain80">
+                                            <Form.Item rules={[{required: true,},]} label="80.1 Explain" name="explain80">
                                                 <textarea id="textar80" name="textar80" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="81. Are you the spouse, son, or daughter of an individual who has engaged in terrorist activity, including providing financial assistance or other support to terrorists or terrorist organizations, in the last five years?"
-                                        name="select68">
+                                        name="relative-of-terrorists-support">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -274,16 +274,16 @@ export const Sixteenth = () => {
                                 {visible64 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="81.1 Explain" name="explain81">
+                                            <Form.Item rules={[{required: true,},]} label="81.1 Explain" name="explain81">
                                                 <textarea id="textar81" name="textar81" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="82. Have you ever ordered, incited, committed, assisted, or otherwise participated in genocide?"
-                                        name="select69">
+                                        name="participated-in-genocide">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -301,16 +301,16 @@ export const Sixteenth = () => {
                                 {visible65 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="82.1 Explain" name="explain82">
+                                            <Form.Item rules={[{required: true,},]} label="82.1 Explain" name="explain82">
                                                 <textarea id="textar82" name="textar82" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="83. Have you ever committed, ordered, incited, assisted, or otherwise participated in torture?"
-                                        name="select70">
+                                        name="participated-in-torture">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -328,16 +328,16 @@ export const Sixteenth = () => {
                                 {visible66 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="83.1 Explain" name="explain83">
+                                            <Form.Item rules={[{required: true,},]} label="83.1 Explain" name="explain83">
                                                 <textarea id="textar83" name="textar83" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="84. Have you committed, ordered, incited, assisted, or otherwise participated in extrajudicial killings, political killings, or other acts of violence?"
-                                        name="select71">
+                                        name="acts-of-violence">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -355,16 +355,16 @@ export const Sixteenth = () => {
                                 {visible67 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="84.1 Explain" name="explain84">
+                                            <Form.Item rules={[{required: true,},]} label="84.1 Explain" name="explain84">
                                                 <textarea id="textar84" name="textar84" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="85. Have you ever engaged in the recruitment or the use of child soldiers?"
-                                        name="select72">
+                                        name="recruitment-of-child-soldiers?">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -382,16 +382,16 @@ export const Sixteenth = () => {
                                 {visible68 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="85.1 Explain" name="explain85">
+                                            <Form.Item rules={[{required: true,},]} label="85.1 Explain" name="explain85">
                                                 <textarea id="textar85" name="textar85" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="86. Have you, while serving as a government official, been responsible for or directly carried out, at any time, particularly severe violations of religious freedom?"
-                                        name="select73">
+                                        name="violations-of-religious-freedom?">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -409,16 +409,16 @@ export const Sixteenth = () => {
                                 {visible69 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="86.1 Explain" name="explain86">
+                                            <Form.Item rules={[{required: true,},]} label="86.1 Explain" name="explain86">
                                                 <textarea id="textar86" name="textar86" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="87. Have you ever been directly involved in the establishment or enforcement of population controls forcing a woman to undergo an abortion against her free choice or a man or a woman to undergo sterilization against his or her free will?"
-                                        name="select74">
+                                        name="forcing to abortion">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -436,16 +436,16 @@ export const Sixteenth = () => {
                                 {visible70 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="87.1 Explain" name="explain87">
+                                            <Form.Item rules={[{required: true,},]} label="87.1 Explain" name="explain87">
                                                 <textarea id="textar87" name="textar87" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="88. Have you ever been directly involved in the coercive transplantation of human organs or bodily tissue?"
-                                        name="select75">
+                                        name="coercive-transplantation">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -463,7 +463,7 @@ export const Sixteenth = () => {
                                 {visible71 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="88.1 Explain" name="explain88">
+                                            <Form.Item rules={[{required: true,},]} label="88.1 Explain" name="explain88">
                                                 <textarea id="textar88" name="textar88" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
@@ -476,6 +476,11 @@ export const Sixteenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.FIFTEENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.SEVENTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

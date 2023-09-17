@@ -10,9 +10,12 @@ export const First = () => {
     const navigate = useNavigate();
     const [visible4, setVisible4] = useState(false)
     const [visible5, setVisible5] = useState(false)
+    const [visible51, setVisible51] = useState(false)
+
     const [form] = Form.useForm();
-    const selectedValue4 = Form.useWatch("select4", form);
-    const selectedValue5 = Form.useWatch("select5", form);
+    const selectedValue4 = Form.useWatch("other-names", form);
+    const selectedValue5 = Form.useWatch("telecode", form);
+    const selectedValue51 = Form.useWatch("maritalStatus", form);
 
 
     useEffect(() => {
@@ -31,6 +34,14 @@ export const First = () => {
         }
     }, [selectedValue5, visible5])
 
+    useEffect(() => {
+        if (selectedValue51 === "h. Other") {
+            setVisible51(true)
+        } else {
+            setVisible51(false)
+        }
+    }, [selectedValue51, visible51])
+
 
     const handleSubmit = (values) => {
         console.log(values)
@@ -45,24 +56,24 @@ export const First = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="1. Surnames" name="surname">
+                                    <Form.Item rules={[{required: true,},]} label="1. Surnames" name="surname" >
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="2. Given Names" name="givenName">
+                                    <Form.Item rules={[{required: true,},]} label="2. Given Names" name="givenName">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="3. Full Name" name="fullName">
+                                    <Form.Item rules={[{required: true,},]} label="3. Full Name" name="fullName">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="4. Have you ever used other names (i.e., maiden, religious, professional, alias, etc.)?"
-                                        name="select4">
+                                        name="other-names">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -80,22 +91,22 @@ export const First = () => {
                                 {visible4 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item
+                                            <Form.Item rules={[{required: true,},]}
                                                 label="4.1 Other Surnames Used (maiden, religious, professional, aliases, etc.)"
                                                 name="otherSurname">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="4.2 Other Given Names Used" name="otherGivenName">
+                                            <Form.Item rules={[{required: true,},]} label="4.2 Other Given Names Used" name="otherGivenName">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="5. Do you have a telecode that represents your name?"
-                                               name="select5">
+                                    <Form.Item rules={[{required: true,},]} label="5. Do you have a telecode that represents your name?"
+                                               name="telecode">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -113,19 +124,19 @@ export const First = () => {
                                 {visible5 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="5.1 Telecode Surnames" name="telecodeSurname">
+                                            <Form.Item rules={[{required: true,},]} label="5.1 Telecode Surnames" name="telecodeSurname">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="5.2 Telecode Given Names" name="telecodeGivenname">
+                                            <Form.Item rules={[{required: true,},]} label="5.2 Telecode Given Names" name="telecodeGivenname">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="6. Sex" name="sex">
+                                    <Form.Item rules={[{required: true,},]} label="6. Sex" name="sex">
                                         <Select
                                             initialvalue=" "
                                             options={[
@@ -141,7 +152,7 @@ export const First = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item label="7. Marital Status" name="materialStatus">
+                                    <Form.Item rules={[{required: true,},]} label="7. Marital Status" name="maritalStatus">
                                         <Select
                                             initialvalue=" "
                                             options={[
@@ -180,16 +191,25 @@ export const First = () => {
                                             ]}/>
                                     </Form.Item>
                                 </Col>
+                                {visible51 && <Col span={24}>
+                                    <Row>
+                                        <Col offset={2} span={22}>
+                                            <Form.Item rules={[{required: true,},]} label="7.1 Explain" name="explain7">
+                                                <textarea id="textar7" name="textar7" rows="6" cols="50"></textarea>
+                                            </Form.Item>
+                                        </Col>
+                                    </Row>
+                                </Col>}
                                 <Col span={24}>
                                     <Form.Item label="8. Date and Place of Birth" name="dateAndBirthday">
                                         <div>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="8.1 (Format: YYYY-MM-DD)" name="dateFormat">
+                                                <Form.Item rules={[{required: true,},]} label="8.1 (Format: YYYY-MM-DD)" name="dateFormat">
                                                     <DatePicker/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item
+                                                <Form.Item rules={[{required: true,},]}
                                                     label="8.2 Country/Region" name="country">
                                                     <Select
                                                         initialvalue=""
@@ -197,12 +217,12 @@ export const First = () => {
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="8.3 City" name="city">
+                                                <Form.Item rules={[{required: true,},]} label="8.3 City" name="city">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
                                             <Col offset={2} span={22}>
-                                                <Form.Item label="8.4 State/Province" name="state">
+                                                <Form.Item rules={[{required: true,},]} label="8.4 State/Province" name="state">
                                                     <Input/>
                                                 </Form.Item>
                                             </Col>
@@ -214,14 +234,19 @@ export const First = () => {
                     </Row>
                 </Col>
                 <Col span={7}>
-                    <Form.Item
-                        label="" name="qwer">
+                    <Form.Item rules={[{required: true,},]}
+                        label="" name="picture">
                         {Pic()}
                     </Form.Item>
                 </Col>
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.HOME)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.SECOND)} htmlType="submit">next</Button>
+                    <Form.Item label=" "><Button type="primary" htmlType="submit" onClick={() => navigate(router.SECOND)}>next</Button></Form.Item>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

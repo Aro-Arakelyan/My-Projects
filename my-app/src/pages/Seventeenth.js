@@ -13,8 +13,8 @@ export const Seventeenth = () => {
 
     const [form] = Form.useForm();
 
-    const selectedValue72 = Form.useWatch("select76", form);
-    const selectedValue73 = Form.useWatch("select77", form);
+    const selectedValue72 = Form.useWatch("obtain-visa-by-fraud", form);
+    const selectedValue73 = Form.useWatch("deported-from-country", form);
 
 
 
@@ -48,9 +48,9 @@ export const Seventeenth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="89. Have you ever sought to obtain or assist others to obtain a visa, entry into the United States, or any other United States immigration benefit by fraud or willful misrepresentation or other unlawful means?"
-                                        name="select76">
+                                        name="obtain-visa-by-fraud">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -68,16 +68,16 @@ export const Seventeenth = () => {
                                 {visible72 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="89.1 Explain" name="explain89">
+                                            <Form.Item rules={[{required: true,},]} label="89.1 Explain" name="explain89">
                                                 <textarea id="textar89" name="textar89" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="90. Have you ever been removed or deported from any country?"
-                                        name="select77">
+                                        name="deported-from-country">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -95,7 +95,7 @@ export const Seventeenth = () => {
                                 {visible73 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="90.1 Explain" name="explain90">
+                                            <Form.Item rules={[{required: true,},]} label="90.1 Explain" name="explain90">
                                                 <textarea id="textar90" name="textar90" rows="4" cols="60"></textarea>
                                             </Form.Item>
                                         </Col>
@@ -108,6 +108,11 @@ export const Seventeenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.SIXTEENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.EIGHTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

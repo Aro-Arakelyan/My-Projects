@@ -13,10 +13,10 @@ export const Twelfth = () => {
     const [visible43, setVisible43] = useState(false)
 
     const [form] = Form.useForm();
-    const selectedValue40 = Form.useWatch("select44", form);
-    const selectedValue41 = Form.useWatch("select45", form);
-    const selectedValue42 = Form.useWatch("select46", form);
-    const selectedValue43 = Form.useWatch("select47", form);
+    const selectedValue40 = Form.useWatch("employed", form);
+    const selectedValue41 = Form.useWatch("add-other-work", form);
+    const selectedValue42 = Form.useWatch("secondary-or-higher", form);
+    const selectedValue43 = Form.useWatch("educational-institutions", form);
 
 
     useEffect(() => {
@@ -65,9 +65,9 @@ export const Twelfth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="56. Were you previously employed?"
-                                        name="select44">
+                                    <Form.Item rules={[{required: true,},]}
+                                               label="56. Were you previously employed?"
+                                               name="employed">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -85,53 +85,65 @@ export const Twelfth = () => {
                                 {visible40 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="56.1 Employer Name" name="employerName56">
+                                            <Form.Item rules={[{required: true,},]} label="56.1 Employer Name"
+                                                       name="employerName56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.2 Employer Street Address" name="employerStreet56">
+                                            <Form.Item rules={[{required: true,},]} label="56.2 Employer Street Address"
+                                                       name="employerStreet56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.3 City" name="city56">
+                                            <Form.Item rules={[{required: true,},]} label="56.3 City" name="city56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.4 State/Province" name="state56">
+                                            <Form.Item rules={[{required: true,},]} label="56.4 State/Province"
+                                                       name="state56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.5 Postal Zone/ZIP Code" name="zipCode56">
+                                            <Form.Item rules={[{required: true,},]} label="56.5 Postal Zone/ZIP Code"
+                                                       name="zipCode56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.5 Postal Zone/ZIP Code" name="zipCode56">
+                                            <Form.Item rules={[{required: true,},]} label="56.6 Country/Region"
+                                                       name="country56">
                                                 <Select
                                                     initialvalue=""
                                                     options={country()}/>
                                             </Form.Item>
-                                            <Form.Item label="56.7 Telephone Number" name="telephoneNumber56">
+                                            <Form.Item rules={[{required: true,},]} label="56.7 Telephone Number"
+                                                       name="telephoneNumber56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.8 Job Title" name="jobTitle56">
+                                            <Form.Item rules={[{required: true,},]} label="56.8 Job Title"
+                                                       name="jobTitle56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.9 Supervisor's Surname" name="supervisorSurname56">
+                                            <Form.Item rules={[{required: true,},]} label="56.9 Supervisor's Surname"
+                                                       name="supervisorSurname56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.10 Supervisor's Given Names"
+                                            <Form.Item rules={[{required: true,},]}
+                                                       label="56.10 Sup ervisor's Given Names"
                                                        name="supervisorGiveName56">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="56.11 Employment Date From" name="dateFrom56">
+                                            <Form.Item rules={[{required: true,},]} label="56.11 Employment Date From"
+                                                       name="dateFrom56">
                                                 <DatePicker/>
                                             </Form.Item>
-                                            <Form.Item label="56.12 Employment Date To" name="dateTo56">
+                                            <Form.Item rules={[{required: true,},]} label="56.12 Employment Date To"
+                                                       name="dateTo56">
                                                 <DatePicker/>
                                             </Form.Item>
-                                            <Form.Item label="56.13 Briefly describe your duties:" name="duties56">
+                                            <Form.Item rules={[{required: true,},]}
+                                                       label="56.13 Briefly describe your duties:" name="duties56">
                                                 <textarea id="textar56" name="textar56" rows="6" cols="50"></textarea>
                                             </Form.Item>
                                         </Col>
                                         <Col span={24}>
-                                            <Form.Item
-                                                label="57. Do you want to add other work place?"
-                                                name="select45">
+                                            <Form.Item rules={[{required: true,},]}
+                                                       label="57. Do you want to add other work place?"
+                                                       name="add-other-work">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -149,49 +161,62 @@ export const Twelfth = () => {
                                         {visible41 && <Col span={24}>
                                             <Row>
                                                 <Col offset={2} span={22}>
-                                                    <Form.Item label="57.1 Employer Name" name="employerName57">
+                                                    <Form.Item rules={[{required: true,},]} label="57.1 Employer Name"
+                                                               name="employerName57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.2 Employer Street Address"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.2 Employer Street Address"
                                                                name="employerStreet57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.3 City" name="city57">
+                                                    <Form.Item rules={[{required: true,},]} label="57.3 City"
+                                                               name="city57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.4 State/Province" name="state57">
+                                                    <Form.Item rules={[{required: true,},]} label="57.4 State/Province"
+                                                               name="state57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.5 Postal Zone/ZIP Code" name="zipCode57">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.5 Postal Zone/ZIP Code" name="zipCode57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.5 Country/Region" name="country57">
+                                                    <Form.Item rules={[{required: true,},]} label="57.5 Country/Region"
+                                                               name="country57">
                                                         <Select
                                                             initialvalue=""
                                                             options={country()}/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.7 Telephone Number"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.7 Telephone Number"
                                                                name="telephoneNumber57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.8 Job Title" name="jobTitle57">
+                                                    <Form.Item rules={[{required: true,},]} label="57.8 Job Title"
+                                                               name="jobTitle57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.9 Supervisor's Surname"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.9 Supervisor's Surname"
                                                                name="supervisorSurname57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.10 Supervisor's Given Names"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.10 Supervisor's Given Names"
                                                                name="supervisorGiveName57">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.11 Employment Date From" name="dateFrom57">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.11 Employment Date From" name="dateFrom57">
                                                         <DatePicker/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.12 Employment Date To" name="dateTo57">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.12 Employment Date To" name="dateTo57">
                                                         <DatePicker/>
                                                     </Form.Item>
-                                                    <Form.Item label="57.13 Briefly describe your duties:"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="57.13 Briefly describe your duties:"
                                                                name="duties57">
                                                             <textarea id="textar56" name="textar56" rows="6"
                                                                       cols="50"></textarea>
@@ -202,9 +227,9 @@ export const Twelfth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="58. Did you attend secondary school or higher?"
-                                        name="select46">
+                                    <Form.Item rules={[{required: true,},]}
+                                               label="58. Did you attend secondary school or higher?"
+                                               name="secondary-or-higher">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -222,41 +247,48 @@ export const Twelfth = () => {
                                 {visible42 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="58.1 Name of educational institution" name="name58">
+                                            <Form.Item rules={[{required: true,},]}
+                                                       label="58.1 Name of educational institution" name="name58">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="58.2 Street" name="street58">
+                                            <Form.Item rules={[{required: true,},]} label="58.2 Street" name="street58">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="58.3 City" name="city58">
+                                            <Form.Item rules={[{required: true,},]} label="58.3 City" name="city58">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="58.4 State/Province" name="state58">
+                                            <Form.Item rules={[{required: true,},]} label="58.4 State/Province"
+                                                       name="state58">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="58.5 Postal Zone/ZIP Code" name="zipCode58">
+                                            <Form.Item rules={[{required: true,},]} label="58.5 Postal Zone/ZIP Code"
+                                                       name="zipCode58">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="58.6 Country" name="country58">
+                                            <Form.Item rules={[{required: true,},]} label="58.6 Country"
+                                                       name="country58">
                                                 <Select
                                                     initialvalue=""
                                                     options={country()}/>
                                             </Form.Item>
-                                            <Form.Item label="58.7 Course of Study" name="courseOfStudy58">
+                                            <Form.Item rules={[{required: true,},]} label="58.7 Course of Study"
+                                                       name="courseOfStudy58">
                                                 <Input/>
                                             </Form.Item>
 
-                                            <Form.Item label="58.8 Date of Attendance From" name="dateFrom58">
+                                            <Form.Item rules={[{required: true,},]} label="58.8 Date of Attendance From"
+                                                       name="dateFrom58">
                                                 <DatePicker/>
                                             </Form.Item>
-                                            <Form.Item label="58.9 Date of Attendance To" name="dateTo58">
+                                            <Form.Item rules={[{required: true,},]} label="58.9 Date of Attendance To"
+                                                       name="dateTo58">
                                                 <DatePicker/>
                                             </Form.Item>
                                         </Col>
                                         <Col span={24}>
-                                            <Form.Item
-                                                label="59. Have you attended any educational institutions at a secondary level or above?"
-                                                name="select47">
+                                            <Form.Item rules={[{required: true,},]}
+                                                       label="59. Have you attended any educational institutions at a secondary level or above?"
+                                                       name="educational-institutions">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -274,35 +306,44 @@ export const Twelfth = () => {
                                         {visible43 && <Col span={24}>
                                             <Row>
                                                 <Col offset={2} span={22}>
-                                                    <Form.Item label="59.1 Name of institution" name="name59">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="59.1 Name of institution" name="name59">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.2 Street" name="street59">
+                                                    <Form.Item rules={[{required: true,},]} label="59.2 Street"
+                                                               name="street59">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.3 City" name="city59">
+                                                    <Form.Item rules={[{required: true,},]} label="59.3 City"
+                                                               name="city59">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.4 State/Province" name="state59">
+                                                    <Form.Item rules={[{required: true,},]} label="59.4 State/Province"
+                                                               name="state59">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.5 Postal Zone/ZIP Code" name="zipCode59">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="59.5 Postal Zone/ZIP Code" name="zipCode59">
                                                         <Input/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.6 Country" name="country59">
+                                                    <Form.Item rules={[{required: true,},]} label="59.6 Country"
+                                                               name="country59">
                                                         <Select
                                                             initialvalue=""
                                                             options={country()}/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.7 Course of Study" name="courseOfStudy59">
+                                                    <Form.Item rules={[{required: true,},]} label="59.7 Course of Study"
+                                                               name="courseOfStudy59">
                                                         <Input/>
                                                     </Form.Item>
 
-                                                    <Form.Item label="59.8 Date of Attendance From"
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="59.8 Date of Attendance From"
                                                                name="dateFrom59">
                                                         <DatePicker/>
                                                     </Form.Item>
-                                                    <Form.Item label="59.9 Date of Attendance To" name="dateTo59">
+                                                    <Form.Item rules={[{required: true,},]}
+                                                               label="59.9 Date of Attendance To" name="dateTo59">
                                                         <DatePicker/>
                                                     </Form.Item>
                                                 </Col>
@@ -317,6 +358,11 @@ export const Twelfth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.ELEVENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.THIRTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

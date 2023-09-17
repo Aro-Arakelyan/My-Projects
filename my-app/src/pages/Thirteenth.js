@@ -15,12 +15,12 @@ export const Thirteenth = () => {
 
 
     const [form] = Form.useForm();
-    const selectedValue44 = Form.useWatch("select48", form);
-    const selectedValue45 = Form.useWatch("select49", form);
-    const selectedValue46 = Form.useWatch("select50", form);
-    const selectedValue47 = Form.useWatch("select51", form);
-    const selectedValue48 = Form.useWatch("select52", form);
-    const selectedValue49 = Form.useWatch("select53", form);
+    const selectedValue44 = Form.useWatch("clan-or-tribe", form);
+    const selectedValue45 = Form.useWatch("traveled-to-countries", form);
+    const selectedValue46 = Form.useWatch("organization-belonged", form);
+    const selectedValue47 = Form.useWatch("skills-or-trainings", form);
+    const selectedValue48 = Form.useWatch("military", form);
+    const selectedValue49 = Form.useWatch("served-in", form);
 
 
     useEffect(() => {
@@ -86,9 +86,9 @@ export const Thirteenth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="60. Do you belong to a clan or tribe?"
-                                        name="select48">
+                                        name="clan-or-tribe">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -106,21 +106,21 @@ export const Thirteenth = () => {
                                 {visible44 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="60.1 Clan or Tribe Name" name="clanName60">
+                                            <Form.Item rules={[{required: true,},]} label="60.1 Clan or Tribe Name" name="clanName60">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="61. Provide a List of Languages You Speak" name="languages61">
+                                    <Form.Item rules={[{required: true,},]} label="61. Provide a List of Languages You Speak" name="languages61">
                                         <textarea id="textar61" name="textar61" rows="6" cols="50"></textarea>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="62. Have you traveled to any countries/regions within the last five years?"
-                                        name="select49">
+                                        name="traveled-to-countries">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -138,16 +138,16 @@ export const Thirteenth = () => {
                                 {visible45 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="" name="noname62">
+                                            <Form.Item rules={[{required: true,},]} label="" name="noname62">
                                                 <textarea id="textar61" name="textar61" rows="6" cols="50"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="63. Have you belonged to, contributed to, or worked for any professional, social, or charitable organization?"
-                                        name="select50">
+                                        name="organization-belonged">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -165,16 +165,16 @@ export const Thirteenth = () => {
                                 {visible46 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="63.1 Organization Name" name="organizationName63">
+                                            <Form.Item rules={[{required: true,},]} label="63.1 Organization Name" name="organizationName63">
                                                 <Input/>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="64. Do you have any specialized skills or training, such as firearms, explosives, nuclear, biological, or chemical experience?"
-                                        name="select51">
+                                        name="skills-or-trainings">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -199,7 +199,7 @@ export const Thirteenth = () => {
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item label="65. Have you ever served in the military?" name="select52">
+                                    <Form.Item rules={[{required: true,},]} label="65. Have you ever served in the military?" name="military">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -217,31 +217,31 @@ export const Thirteenth = () => {
                                 {visible48 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="65.1 Name of Country/Region" name="countryName65">
+                                            <Form.Item rules={[{required: true,},]} label="65.1 Name of Country/Region" name="countryName65">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="65.2 Branch of Service" name="serviceBranch65">
+                                            <Form.Item rules={[{required: true,},]} label="65.2 Branch of Service" name="serviceBranch65">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="65.3 Rank/Position" name="position65">
+                                            <Form.Item rules={[{required: true,},]} label="65.3 Rank/Position" name="position65">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="65.4 Military Specialty" name="military65">
+                                            <Form.Item rules={[{required: true,},]} label="65.4 Military Specialty" name="military65">
                                                 <Input/>
                                             </Form.Item>
-                                            <Form.Item label="65.5 Date of Service From" name="dateFrom65">
+                                            <Form.Item rules={[{required: true,},]} label="65.5 Date of Service From" name="dateFrom65">
                                                 <DatePicker/>
                                             </Form.Item>
-                                            <Form.Item label="65.6 Date of Service To" name="dateTo65">
+                                            <Form.Item rules={[{required: true,},]} label="65.6 Date of Service To" name="dateTo65">
                                                 <DatePicker/>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="66. Have you ever served in, been a member of, or been involved with a paramilitary unit, vigilante unit, rebel group, guerrilla group, or insurgent organization?"
-                                        name="select53">
+                                        name="served-in">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -259,7 +259,7 @@ export const Thirteenth = () => {
                                 {visible49 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                                <Form.Item label="66.1 Explain" name="explain66">
+                                                <Form.Item rules={[{required: true,},]} label="66.1 Explain" name="explain66">
                                                     <textarea id="textar66" name="textar66" rows="6" cols="50"></textarea>
                                                 </Form.Item>
                                         </Col>
@@ -272,6 +272,11 @@ export const Thirteenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.TWELFTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FOURTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

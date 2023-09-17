@@ -2,6 +2,7 @@ import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
 import {useNavigate} from "react-router"
 import {router} from "../constants/router";
 import {country} from "../functions/countries"
+import {Occupation} from "../functions/occupation";
 
 export const Eleventh = () => {
     const navigate = useNavigate();
@@ -19,42 +20,44 @@ export const Eleventh = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item label="55. Primary Occupation" name="primaryOccupation55">
+                                    <Form.Item rules={[{required: true,},]} label="55. Primary Occupation" name="primaryOccupation55">
+                                        <Select
+                                            initialvalue=""
+                                            options={Occupation()}/>
+                                    </Form.Item>
+                                </Col>
+                                <Col offset={2} span={22}>
+                                    <Form.Item rules={[{required: true,},]} label="55.1 Present Employer or School Name " name="schoolName55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.1 Present Employer or School Name " name="schoolName55">
+                                    <Form.Item rules={[{required: true,},]} label="55.2 Street Address" name="streetAddress55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.2 Street Address" name="streetAddress55">
+                                    <Form.Item rules={[{required: true,},]} label="55.3 City" name="city55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.3 City" name="city55">
+                                    <Form.Item rules={[{required: true,},]} label="55.4 State/Province" name="state55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.4 State/Province" name="state55">
+                                    <Form.Item rules={[{required: true,},]} label="55.5 Postal Zone/ZIP Code" name="zipCode55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.5 Postal Zone/ZIP Code" name="zipCode55">
+                                    <Form.Item rules={[{required: true,},]} label="55.6 Phone Number" name="phoneNumber55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.6 Phone Number" name="phoneNumber55">
-                                        <Input/>
-                                    </Form.Item>
-                                </Col>
-                                <Col offset={2} span={22}>
-                                    <Form.Item
+                                    <Form.Item rules={[{required: true,},]}
                                         label="55.7 Country/Region" name="country55">
                                         <Select
                                             initialvalue=""
@@ -62,18 +65,18 @@ export const Eleventh = () => {
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.8 Start Date" name="startDate55">
+                                    <Form.Item rules={[{required: true,},]} label="55.8 Start Date" name="startDate55">
                                         <DatePicker/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.9 Monthly Income in Local Currency (if employed)"
+                                    <Form.Item rules={[{required: true,},]} label="55.9 Monthly Income in Local Currency (if employed)"
                                                name="mountlyIncome55">
                                         <Input/>
                                     </Form.Item>
                                 </Col>
                                 <Col offset={2} span={22}>
-                                    <Form.Item label="55.10 Briefly describe your duties:" name="duties55">
+                                    <Form.Item rules={[{required: true,},]} label="55.10 Briefly describe your duties:" name="duties55">
                                         <textarea id="textar55" name="textar55" rows="6" cols="50"></textarea>
                                     </Form.Item>
                                 </Col>
@@ -84,6 +87,11 @@ export const Eleventh = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.TENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.TWELFTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

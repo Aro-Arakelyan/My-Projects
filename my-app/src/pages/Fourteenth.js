@@ -12,9 +12,9 @@ export const Fourteenth = () => {
 
 
     const [form] = Form.useForm();
-    const selectedValue50 = Form.useWatch("select54", form);
-    const selectedValue51 = Form.useWatch("select55", form);
-    const selectedValue52 = Form.useWatch("select56", form);
+    const selectedValue50 = Form.useWatch("communicable-disease", form);
+    const selectedValue51 = Form.useWatch("mental-or-physical-disorder", form);
+    const selectedValue52 = Form.useWatch("drug-abuser-or-addict", form);
 
 
     useEffect(() => {
@@ -55,9 +55,9 @@ export const Fourteenth = () => {
                         <Col span={15}>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="67. Do you have a communicable disease of public health significance? (Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.)"
-                                        name="select54">
+                                    <Form.Item rules={[{required: true,},]}
+                                               label="67. Do you have a communicable disease of public health significance? (Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.)"
+                                               name="communicable-disease">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -75,16 +75,17 @@ export const Fourteenth = () => {
                                 {visible50 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="67.1 Explain" name="explain67">
+                                            <Form.Item rules={[{required: true,},]} label="67.1 Explain"
+                                                       name="explain67">
                                                 <textarea id="textar67" name="textar67" rows="4" cols="40"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="68. Do you have a mental or physical disorder that poses or is likely to pose a threat to the safety or welfare of yourself or others?"
-                                        name="select55">
+                                    <Form.Item rules={[{required: true,},]}
+                                               label="68. Do you have a mental or physical disorder that poses or is likely to pose a threat to the safety or welfare of yourself or others?"
+                                               name="mental-or-physical-disorder">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -102,16 +103,17 @@ export const Fourteenth = () => {
                                 {visible51 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="68.1 Explain" name="explain68">
+                                            <Form.Item rules={[{required: true,},]} label="68.1 Explain"
+                                                       name="explain68">
                                                 <textarea id="textar68" name="textar68" rows="4" cols="40"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                                 <Col span={24}>
-                                    <Form.Item
-                                        label="69. Are you or have you ever been a drug abuser or addict?"
-                                        name="select56">
+                                    <Form.Item rules={[{required: true,},]}
+                                               label="69. Are you or have you ever been a drug abuser or addict?"
+                                               name="drug-abuser-or-addict">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -129,7 +131,8 @@ export const Fourteenth = () => {
                                 {visible52 && <Col span={24}>
                                     <Row>
                                         <Col offset={2} span={22}>
-                                            <Form.Item label="69.1 Explain" name="explain69">
+                                            <Form.Item rules={[{required: true,},]} label="69.1 Explain"
+                                                       name="explain69">
                                                 <textarea id="textar69" name="textar69" rows="4" cols="40"></textarea>
                                             </Form.Item>
                                         </Col>
@@ -142,6 +145,11 @@ export const Fourteenth = () => {
                 <Col offset={2} span={22}>
                     <Button type="primary" onClick={() => navigate(router.THIRTEENTH)}>previous</Button>
                     <Button type="primary" onClick={() => navigate(router.FIFTEENTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>
