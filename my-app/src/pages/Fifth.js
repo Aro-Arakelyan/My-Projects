@@ -362,8 +362,14 @@ export const Fifth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={21}>
-                    <Button type="primary" onClick={() => navigate(router.FOURTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.SIXTH)} htmlType="submit">next</Button>
+                    <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.FOURTH)}>
+                            previous
+                        </Button>
+                        <Button type="primary" htmlType="submit">
+                            next
+                        </Button>
+                    </Form.Item>
                 </Col>
             </Row>
         </Form>

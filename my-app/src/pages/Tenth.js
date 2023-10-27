@@ -90,11 +90,12 @@ export const Tenth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.NINTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.ELEVENTH)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.NINTH)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

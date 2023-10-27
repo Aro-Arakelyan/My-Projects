@@ -37,7 +37,7 @@ export const Fourth = () => {
         } else {
             setVisible20(false)
         }
-    }, [selectedValue20, visible20])
+    }, [selectedValue19, visible20])
 
 
     const handleSubmit = (values) => {
@@ -88,9 +88,9 @@ export const Fourth = () => {
                                                     ]}/>
                                             </Form.Item>
                                         </Col>
-                                        {visible19 && <Col span={24}>
+                                        {visible19 && <Col span={23}>
                                             <Row>
-                                                <Col offset={4} span={19}>
+                                                <Col offset={4} span={21}>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.1 Group Name" name="select211">
                                                         <Input/>
                                                     </Form.Item>
@@ -99,7 +99,7 @@ export const Fourth = () => {
                                         </Col>}
                                         {visible20 && <Col span={23}>
                                             <Row>
-                                                <Col offset={2} span={21}>
+                                                <Col offset={6} span={21}>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.2 Surnames of Person Traveling With You"
                                                                name="surnamesWithYou">
                                                         <Input/>
@@ -153,11 +153,12 @@ export const Fourth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={21}>
-                    <Button type="primary" onClick={() => navigate(router.THIRD)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.FIFTH)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.THIRD)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

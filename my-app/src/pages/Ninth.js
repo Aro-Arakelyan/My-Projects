@@ -80,7 +80,7 @@ export const Ninth = () => {
                                     <Form.Item rules={[{required: true,},]} label="45. Father's Full Name and Date of Birth"
                                                name="fathers-fullname">
                                         <Select
-                                            initialvalue=""
+                                            initialvalue=""HOME
                                             options={[
                                                 {
                                                     label: "no",
@@ -355,11 +355,12 @@ export const Ninth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.EIGHTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.TENTH)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.EIGHTH)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

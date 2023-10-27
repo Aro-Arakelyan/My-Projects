@@ -356,11 +356,12 @@ export const Twelfth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.ELEVENTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.THIRTEENTH)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.ELEVENTH)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

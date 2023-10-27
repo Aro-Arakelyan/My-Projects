@@ -1,11 +1,11 @@
-import {Route, Routes} from 'react-router';
-import './App.css';
+import {Route, Routes} from "react-router";
+import "./App.css";
+import {router} from "./constants/router";
+import {BrowserRouter} from "react-router-dom";
 import {Home} from "./pages/Home";
-import {router} from './constants/router';
-import {BrowserRouter} from 'react-router-dom';
-import {First} from './pages/First';
-import {Second} from './pages/Second';
-import {Third} from './pages/Third';
+import {First} from "./pages/First";
+import {Second} from "./pages/Second";
+import {Third} from "./pages/Third";
 import {Fourth} from "./pages/Fourth";
 import {Fifth} from "./pages/Fifth";
 import {Sixth} from "./pages/Sixth";

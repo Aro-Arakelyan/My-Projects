@@ -289,11 +289,12 @@ export const Fifteenth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.FOURTEENTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.SIXTEENTH)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.FOURTEENTH)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

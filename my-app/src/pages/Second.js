@@ -10,6 +10,7 @@ export const Second = () => {
     const [visible7, setVisible7] = useState(false)
     const [visible8, setVisible8] = useState(false)
     const [form] = Form.useForm();
+
     const selectedValue6 = Form.useWatch("other-nationality", form);
     const selectedValue7 = Form.useWatch("other-Passport", form);
     const selectedValue8 = Form.useWatch("resident-of-other-country", form);
@@ -40,9 +41,31 @@ export const Second = () => {
     }, [selectedValue8, visible8])
 
 
-    const handleSubmit = (values) => {
-        console.log(values)
-    }
+    const handleSubmit = () => {
+        form
+            .validateFields()
+            .then((values) => {
+                console.log('Form values:', values);
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Server response:', data);
+                        navigate(router.THIRD);
+                    })
+                    .catch((error) => {
+                        console.error('An error occurred:', error);
+                    });
+            })
+            .catch((error) => {
+                console.error('Form validation failed:', error);
+            });
+    };
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
@@ -229,11 +252,12 @@ export const Second = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.FIRST)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.THIRD)} htmlType="submit">next</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.FIRST)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>

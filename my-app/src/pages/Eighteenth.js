@@ -142,12 +142,12 @@ export const Eighteenth = () => {
                     </Row>
                 </Col>
                 <Col offset={2} span={22}>
-                    <Button type="primary" onClick={() => navigate(router.SEVENTEENTH)}>previous</Button>
-                    <Button type="primary" onClick={() => navigate(router.H)} htmlType="submit">Proceed to
-                        pay</Button>
                     <Form.Item label=" ">
+                        <Button type="primary" onClick={() => navigate(router.SEVENTEENTH)}>
+                            previous
+                        </Button>
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            next
                         </Button>
                     </Form.Item>
                 </Col>
