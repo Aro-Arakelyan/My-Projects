@@ -34,9 +34,31 @@ export const Seventh = () => {
 
 
 
-    const handleSubmit = (values) => {
-        console.log(values)
-    }
+    const handleSubmit = () => {
+        form
+            .validateFields()
+            .then((values) => {
+                console.log('Form values:', values);
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Server response:', data);
+                        navigate(router.EIGHTH);
+                    })
+                    .catch((error) => {
+                        console.error('An error occurred:', error);
+                    });
+            })
+            .catch((error) => {
+                console.error('Form validation failed:', error);
+            });
+    };
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
