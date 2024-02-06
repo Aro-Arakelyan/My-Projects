@@ -57,11 +57,11 @@ export const First = () => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
-                        console.log('Server response:', data);
+                        console.log('response:', data);
                         navigate(router.SECOND);
                     })
                     .catch((error) => {
-                        console.error('An error occurred:', error);
+                        console.error('error:', error);
                     });
             })
             .catch((error) => {

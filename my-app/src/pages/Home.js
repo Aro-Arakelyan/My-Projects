@@ -65,11 +65,35 @@ const items = [
 
 export const Home = () => {
         const [form] = Form.useForm();
-        const handleSubmit = (values) => {
-            console.log(values)
-        }
+
+        const handleGet = () => {
+            form
+                .validateFields()
+                .then((values) => {
+                    console.log('Form values:', values);
+                    fetch('https://jsonplaceholder.typicode.com/users', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                        .then((response) => {
+                            if (!response.ok) {
+                                throw new Error('response error');
+                            }
+                            return response.json();
+                        })
+                        .then((data) => {
+                            console.log('Server-Response:', data);
+                        })
+                        .catch((error) => {
+                            console.error('error:', error);
+                        });
+                })
+        };
+
         return (
-            <div>
+            <Form form={form} layout="vertical" onFinish={handleGet}>
                 <div className="fl">
                     <Dropdown
                         menu={{
@@ -83,17 +107,17 @@ export const Home = () => {
                     </Dropdown>
                 </div>
                 <div className="input3">
-                    <Form form={form} layout="vertical" onFinish={handleSubmit}>
+                    <div>
                         <Col span={24}>
-                            <Form.Item rules={[{required: true,},]} label="What's your Location" name="country">
+                            <Form.Item rules={[{required: true,},]} label="What's your Location" name="Location">
                                 <Select
-                                    initialvalue=""
+                                    initialvalue="your country"
                                     options={country()}/>
                             </Form.Item>
                         </Col>
-                    </Form>
+                    </div>
                 </div>
-            </div>
+            </Form>
         )
     }
 ;
