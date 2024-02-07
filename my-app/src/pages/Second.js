@@ -1,8 +1,8 @@
-import {Button, Col, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
-import {country} from "../functions/countries";
+import { Button, Col, Form, Input, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
+import { country } from "../functions/countries";
 
 export const Second = () => {
     const navigate = useNavigate();
@@ -66,6 +66,7 @@ export const Second = () => {
                 console.error('Form validation failed:', error);
             });
     };
+
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
