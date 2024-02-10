@@ -1,7 +1,7 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
 
 
 export const Thirteenth = () => {
@@ -100,13 +100,15 @@ export const Thirteenth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Additional Work/Education/Training
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Additional Work/Education/Training
                     Information</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                    <Row gutter={11}>
+                        <Col span={21}>
+                            <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
                                         label="60. Do you belong to a clan or tribe?"
@@ -136,7 +138,7 @@ export const Thirteenth = () => {
                                 </Col>}
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="61. Provide a List of Languages You Speak" name="languages61">
-                                        <textarea id="textar61" name="textar61" rows="6" cols="50"></textarea>
+                                        <textarea id="textar61" name="textar61" rows="10" cols="30"></textarea>
                                     </Form.Item>
                                 </Col>
                                 <Col span={24}>
@@ -215,7 +217,7 @@ export const Thirteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item label="64.1 Explain" name="explain64">
-                                                <textarea id="textar61" name="textar61" rows="6" cols="50"></textarea>
+                                                <textarea id="textar61" name="textar61" rows="10" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -282,7 +284,7 @@ export const Thirteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                                 <Form.Item rules={[{required: true,},]} label="66.1 Explain" name="explain66">
-                                                    <textarea id="textar66" name="textar66" rows="6" cols="50"></textarea>
+                                                    <textarea id="textar66" name="textar66" rows="10" cols="30"></textarea>
                                                 </Form.Item>
                                         </Col>
                                     </Row>
@@ -290,8 +292,11 @@ export const Thirteenth = () => {
                             </Row>
                         </Col>
                     </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                        </Col>
+                    </div>
+                </div>
+                
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.TWELFTH)}>
                             previous

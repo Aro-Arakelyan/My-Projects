@@ -65,7 +65,8 @@ export const Home = () => {
     ];
 
     return (
-        <Form form={form} layout="vertical" onFinish={handleGet}>
+        <div className="norutyun">
+            <Form form={form} layout="vertical" onFinish={handleGet}>
             <div className="fl">
                 <Dropdown
                     menu={{
@@ -94,5 +95,6 @@ export const Home = () => {
                 </div>
             </div>
         </Form>
+        </div>
     );
 };

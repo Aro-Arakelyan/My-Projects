@@ -1,8 +1,8 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {country} from "../functions/countries"
-import {Occupation} from "../functions/occupation";
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
+import { country } from "../functions/countries";
+import { Occupation } from "../functions/occupation";
 
 export const Eleventh = () => {
     const navigate = useNavigate();
@@ -35,12 +35,14 @@ export const Eleventh = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Family Information: Spouse</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Family Information: Spouse</Col>
+                    <div className="asd">
+                        <div>
+                            <Col offset={2} span={21}>
+                                <Row gutter={11}>
+                                    <Col span={21}>
+                                        <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="55. Primary Occupation" name="primaryOccupation55">
                                         <Select
@@ -99,14 +101,16 @@ export const Eleventh = () => {
                                 </Col>
                                 <Col offset={2} span={22}>
                                     <Form.Item rules={[{required: true,},]} label="55.10 Briefly describe your duties:" name="duties55">
-                                        <textarea id="textar55" name="textar55" rows="6" cols="50"></textarea>
+                                        <textarea id="textar55" name="textar55" rows="10" cols="30"></textarea>
                                     </Form.Item>
                                 </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </div>
+                    </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.TENTH)}>
                             previous

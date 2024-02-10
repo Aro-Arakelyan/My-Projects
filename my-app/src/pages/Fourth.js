@@ -1,7 +1,7 @@
-import {Button, Col, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
+import { Button, Col, Form, Input, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
 
 export const Fourth = () => {
     const navigate = useNavigate();
@@ -67,17 +67,19 @@ export const Fourth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={23} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Travel Companions Information</Col>
-                <Col offset={2} span={15}>
-                    <Row gutter={23}>
-                        <Col span={15}>
-                            <Row>
-                                <Col span={23}>
-                                    <Form.Item rules={[{required: true,},]} label="21. Are there other persons traveling with you?" name="other-persons-with-you">
-                                        <Select
-                                            initialvalue=""
-                                            options={[
+            <Row gutter={11} justify="space-between">
+                <Col offset={6} span={18} className="PersonalInform">Travel Companions Information</Col>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                            <Row gutter={11}>
+                                <Col span={21}>
+                                    <Row className="inp">
+                                        <Col span={24}>
+                                            <Form.Item rules={[{required: true,},]} label="21. Are there other persons traveling with you?" name="other-persons-with-you">
+                                                <Select
+                                                initialvalue=""
+                                                options={[
                                                 {
                                                     label: "no",
                                                     value: "no"
@@ -86,12 +88,12 @@ export const Fourth = () => {
                                                     label: "yes",
                                                     value: "yes"
                                                 }
-                                            ]}/>
-                                    </Form.Item>
-                                </Col>
-                                {visible18 && <Col span={24}>
+                                                ]}/>
+                                            </Form.Item>
+                                        </Col>
+                                    {visible18 && <Col span={24}>
                                     <Row>
-                                        <Col offset={2} span={21}>
+                                        <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]}
                                                 label="21.1 Are you traveling as part of a group or organization?"
                                                 name="group-organization">
@@ -109,9 +111,9 @@ export const Fourth = () => {
                                                     ]}/>
                                             </Form.Item>
                                         </Col>
-                                        {visible19 && <Col span={23}>
+                                        {visible19 && <Col span={24}>
                                             <Row>
-                                                <Col offset={4} span={21}>
+                                                <Col offset={4} span={20}>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.1 Group Name" name="select211">
                                                         <Input/>
                                                     </Form.Item>
@@ -122,15 +124,15 @@ export const Fourth = () => {
                                             <Row>
                                                 <Col offset={6} span={21}>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.2 Surnames of Person Traveling With You"
-                                                               name="surnamesWithYou">
+                                                        name="surnamesWithYou">
                                                         <Input/>
                                                     </Form.Item>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.3 Given Names of Person Traveling With You"
-                                                               name="namesWithYou">
+                                                        name="namesWithYou">
                                                         <Input/>
                                                     </Form.Item>
                                                     <Form.Item rules={[{required: true,},]} label="21.1.4 Relationship with Person"
-                                                               name="relationshipWithPerson">
+                                                        name="relationshipWithPerson">
                                                         <Select
                                                             initialvalue=""
                                                             options={[
@@ -172,8 +174,10 @@ export const Fourth = () => {
                             </Row>
                         </Col>
                     </Row>
-                </Col>
-                <Col offset={2} span={21}>
+                        </Col>
+                    </div>
+                </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.THIRD)}>
                             previous

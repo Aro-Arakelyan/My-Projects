@@ -70,15 +70,17 @@ export const Second = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={16} className="PersonalInform">Personal Information 2</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Personal Information 2</Col>
+                <div className="asd">
+                    <div>
+                    <Col offset={2} span={21}>
+                    <Row gutter={11}>
+                        <Col span={21}>
                             <Row>
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
-                                               label="9. Country/Region of Origin (Nationality)" name="nationality">
+                                        label="9. Country/Region of Origin (Nationality)" name="nationality">
                                         <Select
                                             initialvalue=""
                                             options={country()}/>
@@ -86,8 +88,8 @@ export const Second = () => {
                                 </Col>
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
-                                               label="10. Do you hold or have you held any nationality other than the one indicated above on nationality?"
-                                               name="other-nationality">
+                                        label="10. Do you hold or have you held any nationality other than the one indicated above on nationality?"
+                                        name="other-nationality">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -106,8 +108,8 @@ export const Second = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]}
-                                                       label="10.1 Other Country/Region of Origin (Nationality)"
-                                                       name="other-country">
+                                                label="10.1 Other Country/Region of Origin (Nationality)"
+                                                name="other-country">
                                                 <Select
                                                     initialvalue=""
                                                     options={country()}/>
@@ -115,8 +117,8 @@ export const Second = () => {
                                         </Col>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]}
-                                                       label="10.2 Do you hold a passport for the other country/region of origin (nationality) indicated above?"
-                                                       name="other-Passport">
+                                                label="10.2 Do you hold a passport for the other country/region of origin (nationality) indicated above?"
+                                                name="other-Passport">
                                                 <Select
                                                     initialvalue=""
                                                     options={[
@@ -135,7 +137,7 @@ export const Second = () => {
                                             <Row>
                                                 <Col offset={4} span={20}>
                                                     <Form.Item rules={[{required: true,},]}
-                                                               label="10.2.1 Passport Number" name="passport-number">
+                                                        label="10.2.1 Passport Number" name="passport-number">
                                                         <Input/>
                                                     </Form.Item>
                                                 </Col>
@@ -145,8 +147,8 @@ export const Second = () => {
                                 </Col>}
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
-                                               label="11. Are you a permanent resident of a country/region other than your country/region of origin (nationality) indicated above?"
-                                               name="resident-of-other-country">
+                                        label="11. Are you a permanent resident of a country/region other than your country/region of origin (nationality) indicated above?"
+                                        name="resident-of-other-country">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -165,8 +167,8 @@ export const Second = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]}
-                                                       label="11.1 Other Permanent Resident Country/Region"
-                                                       name="permanent-resident-of other-Country">
+                                                label="11.1 Other Permanent Resident Country/Region"
+                                                name="permanent-resident-of other-Country">
                                                 <Select
                                                     initialvalue=""
                                                     options={country()}/>
@@ -176,7 +178,7 @@ export const Second = () => {
                                 </Col>}
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="12. National Identification Number"
-                                               name="identification-number">
+                                        name="identification-number">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -201,7 +203,7 @@ export const Second = () => {
                                 </Col>
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="13.1.2.3 U.S. Social Security Number"
-                                               name="SSN">
+                                        name="SSN">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -215,17 +217,22 @@ export const Second = () => {
                                                 }
                                             ]}/>
                                     </Form.Item>
-                                    <Col offset={7}>
-                                        <span className="text">If Yes, fill</span>
-                                        <span className="ssn">SSN1</span>
+                                    <Col offset={4}>
+                                        {/* <span className="ssn">SSN1</span>
                                         <span className="ssn">SSN2</span>
-                                        <span className="ssn">SSN3</span>
-                                        <span><input className="input2" type="text"/></span>
+                                        <span className="ssn">SSN3</span> */}
+                                        <span className="text">
+                                            If Yes, fill
+                                        </span>
+                                        <span>
+                                            <input className="input1" type="text"/>
+                                        </span>
+                                        
                                     </Col>
                                 </Col>
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="14. U.S. Taxpayer ID Number"
-                                               name="taxpayer-ID-number">
+                                        name="taxpayer-ID-number">
                                         <Select
                                             initialvalue=""
                                             options={[
@@ -252,7 +259,9 @@ export const Second = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={2} span={22}>
+                    </div>
+                </div>
+                <Col className="buttons" offset={2} span={22}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.FIRST)}>
                             previous

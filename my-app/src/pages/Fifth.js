@@ -1,10 +1,10 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
-import {lengthOfStay1, lengthOfStay2} from "../functions/travelInformation";
-import {province} from "../functions/countries";
-import {year} from "../functions/years";
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
+import { province } from "../functions/countries";
+import { lengthOfStay1, lengthOfStay2 } from "../functions/travelInformation";
+import { year } from "../functions/years";
 
 export const Fifth = () => {
     const navigate = useNavigate();
@@ -112,12 +112,14 @@ export const Fifth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={23} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Previous U.S. Travel Information</Col>
-                <Col offset={2} span={15}>
-                    <Row gutter={23}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Previous U.S. Travel Information</Col>
+                    <div className="asd">
+                        <div>
+                            <Col offset={2} span={21}>
+                                <Row gutter={11}>
+                                    <Col span={21}>
+                                        <Row className="inp">
                                 <Col span={23}>
                                     <Form.Item rules={[{required: true,},]} label="22. Have you ever been in the U.S.?" name="U.S.been">
                                         <Select
@@ -379,11 +381,13 @@ export const Fifth = () => {
                                         </Col>
                                     </Row>
                                 </Col>}
-                            </Row>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={21}>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </div>
+                    </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.FOURTH)}>
                             previous

@@ -1,7 +1,7 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
-import { useNavigate } from "react-router"
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { useNavigate } from "react-router";
 import { router } from "../constants/router";
-import {country} from "../functions/countries"
+import { country } from "../functions/countries";
 
 
 export const Tenth = () => {
@@ -35,12 +35,14 @@ export const Tenth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Family Information: Spouse</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Family Information: Spouse</Col>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                            <Row gutter={11}>
+                                <Col span={21}>
+                                    <Row className="inp">
                                 <span className="subtitle">Spouse's Full Name (include Maiden Name)</span>
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="49. Spouse's Surnames" name="spouseSurename49">
@@ -107,11 +109,13 @@ export const Tenth = () => {
                                             ]}/>
                                     </Form.Item>
                                 </Col>
+                                    </Row>
+                                </Col>
                             </Row>
                         </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                    </div>
+                </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.NINTH)}>
                             previous

@@ -1,7 +1,7 @@
-import {Button, Col, Form, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
+import { Button, Col, Form, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
 
 
 export const Fifteenth = () => {
@@ -111,12 +111,14 @@ export const Fifteenth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Security and Background: Part 2</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={1} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Security and Background: Part 2</Col>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                            <Row gutter={11}>
+                                <Col span={21}>
+                                    <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
                                         label="70. Have you ever been arrested or convicted for any offense or crime, even though subject of a pardon, amnesty, or other similar action?"
@@ -139,7 +141,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="70.1 Explain" name="explain70">
-                                                <textarea id="textar70" name="textar70" rows="4" cols="60"></textarea>
+                                                <textarea id="textar70" name="textar70" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -166,7 +168,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="71.1 Explain" name="explain71">
-                                                <textarea id="textar71" name="textar71" rows="4" cols="60"></textarea>
+                                                <textarea id="textar71" name="textar71" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -193,7 +195,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="72.1 Explain" name="explain72">
-                                                <textarea id="textar72" name="textar72" rows="4" cols="60"></textarea>
+                                                <textarea id="textar72" name="textar72" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -220,7 +222,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="73.1 Explain" name="explain73">
-                                                <textarea id="textar73" name="textar73" rows="4" cols="60"></textarea>
+                                                <textarea id="textar73" name="textar73" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -247,7 +249,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="74.1 Explain" name="explain74">
-                                                <textarea id="textar74" name="textar74" rows="4" cols="60"></textarea>
+                                                <textarea id="textar74" name="textar74" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -274,7 +276,7 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="75.1 Explain" name="explain75">
-                                                <textarea id="textar75" name="textar75" rows="4" cols="60"></textarea>
+                                                <textarea id="textar75" name="textar75" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -301,16 +303,18 @@ export const Fifteenth = () => {
                                     <Row>
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="76.1 Explain" name="explain76">
-                                                <textarea id="textar76" name="textar76" rows="4" cols="60"></textarea>
+                                                <textarea id="textar76" name="textar76" rows="8" cols="30"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
+                                    </Row>
+                                </Col>
                             </Row>
                         </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                    </div>
+                </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.FOURTEENTH)}>
                             previous

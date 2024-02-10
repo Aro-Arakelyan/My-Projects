@@ -1,7 +1,7 @@
-import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
+import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
 
 
 export const Ninth = () => {
@@ -92,12 +92,14 @@ export const Ninth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Family Information: Relatives</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Family Information: Relatives</Col>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                            <Row gutter={11}>
+                        <Col span={21}>
+                            <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="45. Father's Full Name and Date of Birth"
                                                name="fathers-fullname">
@@ -374,9 +376,11 @@ export const Ninth = () => {
                                 </Col>
                             </Row>
                         </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                            </Row>
+                        </Col>
+                    </div>
+                </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.EIGHTH)}>
                             previous

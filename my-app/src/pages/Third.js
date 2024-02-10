@@ -1054,12 +1054,14 @@ export const Third = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={16} className="PersonalInform">Travel Information</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Travel Information</Col>
+                <div className="asd">
+                    <div>
+                    <Col offset={2} span={21}>
+                    <Row gutter={11}>
+                        <Col span={21}>
+                            <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]} label="15. Purpose of Trip to the U.S." name="fifteen">
                                         <Select
@@ -2659,7 +2661,9 @@ export const Third = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={2} span={22}>
+                    </div>
+                </div>
+                <Col classname="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.SECOND)}>
                             previous

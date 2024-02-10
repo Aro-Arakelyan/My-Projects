@@ -1,7 +1,7 @@
-import {Button, Col, Form, Row, Select} from "antd"
-import {useNavigate} from "react-router"
-import {router} from "../constants/router";
-import {useEffect, useState} from "react";
+import { Button, Col, Form, Row, Select } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { router } from "../constants/router";
 
 
 export const Fourteenth = () => {
@@ -70,12 +70,14 @@ export const Fourteenth = () => {
 
     return (
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
-            <Row gutter={24} justify="space-between">
-                <Col offset={4} span={15} className="PersonalInform">Security and Background: Part 1</Col>
-                <Col offset={2} span={16}>
-                    <Row gutter={24}>
-                        <Col span={15}>
-                            <Row>
+            <Row gutter={11} justify="space-between">
+                <Col offset={8} span={16} className="PersonalInform">Security and Background: Part 1</Col>
+                <div className="asd">
+                    <div>
+                        <Col offset={2} span={21}>
+                            <Row gutter={11}>
+                        <Col span={21}>
+                            <Row className="inp">
                                 <Col span={24}>
                                     <Form.Item rules={[{required: true,},]}
                                                label="67. Do you have a communicable disease of public health significance? (Communicable diseases of public significance include chancroid, gonorrhea, granuloma inguinale, infectious leprosy, lymphogranuloma venereum, infectious stage syphilis, active tuberculosis, and other diseases as determined by the Department of Health and Human Services.)"
@@ -99,7 +101,7 @@ export const Fourteenth = () => {
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="67.1 Explain"
                                                        name="explain67">
-                                                <textarea id="textar67" name="textar67" rows="4" cols="40"></textarea>
+                                                <textarea id="textar67" name="textar67" rows="8" cols="25"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -127,7 +129,7 @@ export const Fourteenth = () => {
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="68.1 Explain"
                                                        name="explain68">
-                                                <textarea id="textar68" name="textar68" rows="4" cols="40"></textarea>
+                                                <textarea id="textar68" name="textar68" rows="8" cols="25"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
@@ -155,16 +157,18 @@ export const Fourteenth = () => {
                                         <Col offset={2} span={22}>
                                             <Form.Item rules={[{required: true,},]} label="69.1 Explain"
                                                        name="explain69">
-                                                <textarea id="textar69" name="textar69" rows="4" cols="40"></textarea>
+                                                <textarea id="textar69" name="textar69" rows="8" cols="25"></textarea>
                                             </Form.Item>
                                         </Col>
                                     </Row>
                                 </Col>}
                             </Row>
                         </Col>
-                    </Row>
-                </Col>
-                <Col offset={2} span={22}>
+                            </Row>
+                        </Col>
+                    </div>
+                </div>
+                <Col className="buttons" offset={6} span={18}>
                     <Form.Item label=" ">
                         <Button type="primary" onClick={() => navigate(router.THIRTEENTH)}>
                             previous
