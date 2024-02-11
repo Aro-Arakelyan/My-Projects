@@ -1,6 +1,7 @@
 import { Button, Col, Form, Input, Row, Select } from "antd";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import "../App.css";
 import { router } from "../constants/router";
 import { country } from "../functions/countries";
 
@@ -10,6 +11,17 @@ export const Second = () => {
     const [visible7, setVisible7] = useState(false)
     const [visible8, setVisible8] = useState(false)
     const [form] = Form.useForm();
+
+    //eslint-disable-next-line
+    const [count, setCount] = useState(0);
+
+    const handleNextButtonClick = () => {
+        setCount(prevCount => {
+            const newCount = prevCount + 1;
+            console.log("New count:", newCount);
+            return newCount;
+        });
+    };
 
     const selectedValue6 = Form.useWatch("other-nationality", form);
     const selectedValue7 = Form.useWatch("other-Passport", form);
@@ -266,7 +278,7 @@ export const Second = () => {
                         <Button type="primary" onClick={() => navigate(router.FIRST)}>
                             previous
                         </Button>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" onClick={handleNextButtonClick}>
                             next
                         </Button>
                     </Form.Item>

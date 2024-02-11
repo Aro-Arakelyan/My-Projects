@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -26,13 +27,14 @@ import { Twelfth } from "./pages/Twelfth";
 
 
 function App() {
+    const [count, setCount] = useState(0);
     return (
         <BrowserRouter>
-            <Header/>
+            <Header Header key={count} count={count}/>
             <Routes>
                 <Route path={router.HOME} element={<Home/>}/>
-                <Route path={router.FIRST} element={<First/>}/>
-                <Route path={router.SECOND} element={<Second/>}/>
+                <Route path={router.FIRST} element={<First setCount={setCount}/>}/>
+                <Route path={router.SECOND} element={<Second setCount={setCount}/>}/>
                 <Route path={router.THIRD} element={<Third/>}/>
                 <Route path={router.FOURTH} element={<Fourth/>}/>
                 <Route path={router.FIFTH} element={<Fifth/>}/>
@@ -56,5 +58,7 @@ function App() {
 }
 
 export default App;
+
+
 
 

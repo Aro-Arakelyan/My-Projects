@@ -1,5 +1,5 @@
 import { Button, Col, DatePicker, Form, Input, Row, Select } from "antd";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 import { router } from "../constants/router";
@@ -14,6 +14,21 @@ export const First = () => {
     const [visible5, setVisible5] = useState(false)
     const [visible51, setVisible51] = useState(false)
     const [form] = Form.useForm();
+
+    //eslint-disable-next-line
+    const [count, setCount] = useState(0);
+
+    // const handleNextButtonClick = () => {
+    //     setCount(prevCount => prevCount + 1);
+    // };
+
+    const handleNextButtonClick = () => {
+        setCount(prevCount => {
+            const newCount = prevCount + 1;
+            console.log("New count:", newCount);
+            return newCount;
+        });
+    };
 
     const selectedValue4 = Form.useWatch("other-names", form);
     const selectedValue5 = Form.useWatch("telecode", form);
@@ -267,7 +282,7 @@ export const First = () => {
                         <Button type="primary" onClick={() => navigate(router.HOME)}>
                             previous
                         </Button>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" onClick={handleNextButtonClick}>
                             next
                         </Button>
                     </Form.Item>
